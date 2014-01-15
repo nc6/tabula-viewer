@@ -22,8 +22,14 @@ body {
   margin-top:10px;
 }
 
+h1.log-heading {
+  /*padding-left : 20px;*/
+  font-size:26px;
+  margin-top:10px;
+}
+
 div.tabula-entry .panel-body {
-  padding: 5px;
+  padding: 0px;
 }
 
 div.tabula-entry .panel-footer {
@@ -46,6 +52,16 @@ div.tabula-entry .tabula-entry-body .tabula-exitstatus {
 
 div.tabula-entry .tabula-entry-header, div.tabula-entry .tabula-entry-footer {
   padding-left: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+}
+
+div.tabula-entry .tabula-entry-header {
+  padding-top: 5px;
+}
+
+div.tabula-entry .tabula-entry-footer {
+  padding-bottom: 5px;
 }
 
 .container {
