@@ -1,6 +1,5 @@
 
 body {
-  min-height: 2000px;
   padding-top: 70px;
 }
 
@@ -14,8 +13,14 @@ body {
   margin-bottom: 20px;
 }
 
+.grey-box h1 {
+  font-size:26px;
+  margin-top:10px;
+}
+
 .grey-box h2 {
-  padding-top:5px;
+  font-size:20px;
+  margin-top:10px;
 }
 
 div.tabula-entry.exitSuccess {
@@ -28,4 +33,8 @@ div.tabula-entry.exitKilled {
 
 div.tabula-entry.exitFailure {
   background-color: #d2322d;
+}
+
+.container {
+  width:80%;
 }
