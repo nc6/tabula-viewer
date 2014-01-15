@@ -13,6 +13,10 @@ body {
 	margin: 40px;
 }
 
+.grey-box h2 {
+  padding-top:5px;
+}
+
 div.tabula-entry.exitSuccess {
   background-color: green;
 }
