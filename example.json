@@ -1,6 +1,6 @@
 [{
     "entry": {
-        "exitStatus": 0,
+        "exitStatus": 128,
         "workingDirectory": "/Users/nc6/work/tabula",
         "startTime": "2014-01-15T12:35:44.762Z",
         "endTime": "2014-01-15T12:35:44.775Z",
@@ -127,7 +127,7 @@
     "namespace": "tabula::consoleRecord"
 },{
     "entry": {
-        "exitStatus": 0,
+        "exitStatus": 1,
         "workingDirectory": "/Users/nc6/work/tabula",
         "startTime": "2014-01-15T12:35:44.781Z",
         "endTime": "2014-01-15T12:35:44.794Z",
