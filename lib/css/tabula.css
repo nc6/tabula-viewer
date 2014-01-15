@@ -18,13 +18,13 @@ body {
 }
 
 div.tabula-entry.exitSuccess {
-  background-color: green;
+  background-color: #47a447;
 }
 
 div.tabula-entry.exitKilled {
-  background-color: orange;
+  background-color: #ed9c28;
 }
 
 div.tabula-entry.exitFailure {
-  background-color: red;
+  background-color: #d2322d;
 }
