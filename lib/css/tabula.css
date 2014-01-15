@@ -9,7 +9,6 @@ body {
 	border-radius: 4px;
 
 	padding: 20px 20px;
-	/*margin: 40px;*/
   margin-bottom: 20px;
 }
 
@@ -23,20 +22,42 @@ body {
   margin-top:10px;
 }
 
-div.tabula-entry.exitSuccess {
+div.tabula-entry .exitSuccess {
   background-color: #47a447;
 }
 
-div.tabula-entry.exitKilled {
+div.tabula-entry .exitKilled {
   background-color: #ed9c28;
 }
 
-div.tabula-entry.exitFailure {
+div.tabula-entry .exitFailure {
   background-color: #d2322d;
+}
+
+div.tabula-entry .panel-body {
+  padding: 5px;
 }
 
 div.tabula-entry .panel-footer {
   display: none;
+}
+
+div.tabula-entry .tabula-entry-body {
+  padding: 10px;
+  font-size: 14pt;
+}
+
+div.tabula-entry .tabula-entry-body .tabula-cwd {
+
+}
+
+div.tabula-entry .tabula-entry-body .tabula-exitstatus {
+  float: right;
+  font-size: 14pt;
+}
+
+div.tabula-entry .tabula-entry-header, div.tabula-entry .tabula-entry-footer {
+  padding-left: 10px;
 }
 
 .container {
