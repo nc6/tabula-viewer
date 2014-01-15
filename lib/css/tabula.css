@@ -22,6 +22,7 @@ body {
   margin-top:10px;
 }
 
+/*
 div.tabula-entry .exitSuccess {
   background-color: #47a447;
 }
@@ -33,6 +34,7 @@ div.tabula-entry .exitKilled {
 div.tabula-entry .exitFailure {
   background-color: #d2322d;
 }
+*/
 
 div.tabula-entry .panel-body {
   padding: 5px;
@@ -78,7 +80,7 @@ div.tabula-entry .tabula-entry-header, div.tabula-entry .tabula-entry-footer {
   padding: 2px 5px;
   text-align: center;
   text-decoration: none;
-  text-transform: lowercase;
+  text-transform: uppercase;
 }
 
 .lozenge-success {
