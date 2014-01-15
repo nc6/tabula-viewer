@@ -10,7 +10,8 @@ body {
 	border-radius: 4px;
 
 	padding: 20px 20px;
-	margin: 40px;
+	/*margin: 40px;*/
+  margin-bottom: 20px;
 }
 
 .grey-box h2 {
