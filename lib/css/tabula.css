@@ -38,3 +38,38 @@ div.tabula-entry.exitFailure {
 .container {
   width:80%;
 }
+
+
+.lozenge {
+  background: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: #333;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 99%;
+  margin: 0;
+  padding: 2px 5px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+
+.lozenge-success {
+  background-color: #14892c;
+  border-color: #14892c;
+  color: #fff;
+}
+
+.lozenge-failed {
+  background-color: #d04437;
+  border-color: #d04437;
+  color: #fff;
+}
+
+.lozenge-killed {
+background-color: #ffd351;
+border-color: #ffd351;
+color: #594300;
+}
