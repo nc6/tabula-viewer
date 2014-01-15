@@ -1,4 +1,16 @@
+
 body {
   min-height: 2000px;
   padding-top: 70px;
+}
+div.tabula-entry.exitSuccess {
+  background-color: green;
+}
+
+div.tabula-entry.exitKilled {
+  background-color: orange;
+}
+
+div.tabula-entry.exitFailure {
+  background-color: red;
 }
