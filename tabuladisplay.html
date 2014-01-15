@@ -1,59 +1,73 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  	<meta charset="utf-8">
-  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  	<meta name="description" content="">
-  	<meta name="author" content="">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-  	<title>tabula viewer</title>
+  <title>tabula viewer</title>
 
-  	<!-- Bootstrap core CSS -->
-  	<link href="lib/css/bootstrap.css" rel="stylesheet">
-  </head>
-  <body>
+  <!-- Bootstrap core CSS -->
+  <link href="lib/css/bootstrap.css" rel="stylesheet">
+  <link href="lib/css/tabula.css" rel="stylesheet">
+</head>
 
-  	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-  		<div class="container">
-  			<div class="navbar-header">
-  				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-  					<span class="sr-only">Toggle navigation</span>
-  					<span class="icon-bar"></span>
-  					<span class="icon-bar"></span>
-  					<span class="icon-bar"></span>
-  				</button>
-  				<a class="navbar-brand" href="#">tabula</a>
-  			</div>
-  			<div class="navbar-collapse collapse">
-  				<ul class="nav navbar-nav">
-  					<li><a href="https://github.com/nc6/tabula">repo for tabula</a></li>
-  					<li><a href="https://github.com/nc6/tabula-viewer">repo for tabula viewer</a></li>
-  				</ul>
-  			</div><!--/.navbar-collapse -->
-  		</div>
-  	</div>
+<body>
 
-  	<div class="container">
-      <h3>Load tabula project</h3>
-      <div class="input-group">
-        <input type="text" id="project-name" class="form-control" placeholder="Project">
-        <span class="input-group-btn">
-            <button type="button" id="btn-load-project" class="btn btn-default">Load</button>
-        </span>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">tabula</a>
       </div>
-    </div> <!-- /container -->
-    <div class="container" id="project-data">
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="https://github.com/nc6/tabula">repo for tabula</a>
+          </li>
+          <li>
+            <a href="https://github.com/nc6/tabula-viewer">repo for tabula viewer</a>
+          </li>
+        </ul>
+      </div>
+      <!--/.navbar-collapse -->
     </div>
+  </div>
 
-    <!-- Template -->
-    <div id="template-entry-hidden" style="display:none;">Testing</div>
-    <!-- Bootstrap core JavaScript
+  <div class="container">
+    <div class="jumbotron">
+      <h3>Load tabula project</h3>
+      <form role="form">
+        <div class="form-group">
+          <label for="project">tabula output file</label>
+          <input type="file" class="form-control" id="project-name" placeholder="Project">
+        </div>
+        <span class="input-group-btn">
+          <button type="button" id="btn-load-project" class="btn btn-default">Load</button>
+        </span>
+      </form>
+    </div>
+  </div>
+  <!-- /container -->
+  <div class="container" id="project-data">
+  </div>
+
+  <!-- Template -->
+  <div id="template-entry-hidden" style="display:none;">Testing</div>
+  <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
-    <script src="lib/js/bootstrap.min.js"></script>
-    <script src="lib/js/tabulate.js"></script>
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+  <script src="lib/js/bootstrap.min.js"></script>
+  <script src="lib/js/tabulate.js"></script>
 </body>
+
 </html>
