@@ -1,0 +1,1690 @@
+[{
+    "entry": {
+        "exitStatus": 0,
+        "workingDirectory": "/Users/nc6/work/tabula",
+        "startTime": "2014-01-15T12:35:44.762Z",
+        "endTime": "2014-01-15T12:35:44.775Z",
+        "command": "501 trap '/Users/nc6/work/tabula/dist/build/tabula/tabula trap /tmp/tabula-4891511.soc $BASHPID $PPID $BASH_COMMAND' DEBUG",
+        "events": [],
+        "stdin": "",
+        "posteriorEnv": [],
+        "stderr": "",
+        "priorEnv": [
+            [
+                "CAML_LD_LIBRARY_PATH",
+                "/Users/nc6/.opam/system/lib/stublibs:/usr/local/lib/ocaml/stublibs"
+            ],
+            [
+                "MANPATH",
+                "/Users/nc6/.opam/system/man:/usr/share/man:/usr/local/share/man:/Library/TeX/Distributions/.DefaultTeX/Contents/Man:/Users/nc6/.opam/system/man"
+            ],
+            [
+                "TERM_PROGRAM",
+                "iTerm.app"
+            ],
+            [
+                "GPG_AGENT_INFO",
+                "/Users/nc6/.gnupg/S.gpg-agent:434:1"
+            ],
+            [
+                "TERM",
+                "xterm"
+            ],
+            [
+                "SHELL",
+                "/usr/local/bin/bash"
+            ],
+            [
+                "TMPDIR",
+                "/var/folders/n7/0xd_j8cn5xs1v2xh787r7560000dxb/T/"
+            ],
+            [
+                "Apple_PubSub_Socket_Render",
+                "/tmp/launch-eKilSU/Render"
+            ],
+            [
+                "OCAML_TOPLEVEL_PATH",
+                "/Users/nc6/.opam/system/lib/toplevel"
+            ],
+            [
+                "USER",
+                "nc6"
+            ],
+            [
+                "SSH_AUTH_SOCK",
+                "/tmp/launch-zZ17KX/Listeners"
+            ],
+            [
+                "__CF_USER_TEXT_ENCODING",
+                "0x37AB:0:0"
+            ],
+            [
+                "__CHECKFIX1436934",
+                "1"
+            ],
+            [
+                "PATH",
+                "/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/usr/local/MacGPG2/bin:/usr/local/munki:/usr/texbin:/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/local/share/npm/bin:/usr/local/share/npm/bin"
+            ],
+            [
+                "PWD",
+                "/Users/nc6/work/tabula"
+            ],
+            [
+                "LANG",
+                "en_GB.UTF-8"
+            ],
+            [
+                "ITERM_PROFILE",
+                "Default"
+            ],
+            [
+                "HTTPS_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "SHLVL",
+                "2"
+            ],
+            [
+                "HOME",
+                "/Users/nc6"
+            ],
+            [
+                "COLORFGBG",
+                "12;8"
+            ],
+            [
+                "HTTP_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "ITERM_SESSION_ID",
+                "w0t1p0"
+            ],
+            [
+                "LOGNAME",
+                "nc6"
+            ],
+            [
+                "PROMPT_COMMAND",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula prompt /tmp/tabula-4891511.soc $? $(history 1)"
+            ],
+            [
+                "DISPLAY",
+                "/tmp/launch-EdyySq/org.macosforge.xquartz:0"
+            ],
+            [
+                "_",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula"
+            ]
+        ],
+        "host": "mib105205i.local",
+        "stdout": "\u001b[?1034hmib105205i:tabula nc6$ trap '/Users/nc6/work/tabula/dist/build/tabula"
+    },
+    "version": 6,
+    "timestamp": "2014-01-15T12:35:44.762Z",
+    "namespace": "tabula::consoleRecord"
+},{
+    "entry": {
+        "exitStatus": 0,
+        "workingDirectory": "/Users/nc6/work/tabula",
+        "startTime": "2014-01-15T12:35:44.781Z",
+        "endTime": "2014-01-15T12:35:44.794Z",
+        "command": "502 clear",
+        "events": [
+            {
+                "subCommand": "clear",
+                "ppid": 27988,
+                "timestamp": "2014-01-15T12:35:44.781Z",
+                "envChanges": [],
+                "pid": 27989
+            }
+        ],
+        "stdin": "",
+        "posteriorEnv": [],
+        "stderr": "\u001b[H\u001b[2J",
+        "priorEnv": [
+            [
+                "CAML_LD_LIBRARY_PATH",
+                "/Users/nc6/.opam/system/lib/stublibs:/usr/local/lib/ocaml/stublibs"
+            ],
+            [
+                "MANPATH",
+                "/Users/nc6/.opam/system/man:/usr/share/man:/usr/local/share/man:/Library/TeX/Distributions/.DefaultTeX/Contents/Man:/Users/nc6/.opam/system/man"
+            ],
+            [
+                "TERM_PROGRAM",
+                "iTerm.app"
+            ],
+            [
+                "GPG_AGENT_INFO",
+                "/Users/nc6/.gnupg/S.gpg-agent:434:1"
+            ],
+            [
+                "TERM",
+                "xterm"
+            ],
+            [
+                "SHELL",
+                "/usr/local/bin/bash"
+            ],
+            [
+                "TMPDIR",
+                "/var/folders/n7/0xd_j8cn5xs1v2xh787r7560000dxb/T/"
+            ],
+            [
+                "Apple_PubSub_Socket_Render",
+                "/tmp/launch-eKilSU/Render"
+            ],
+            [
+                "OCAML_TOPLEVEL_PATH",
+                "/Users/nc6/.opam/system/lib/toplevel"
+            ],
+            [
+                "USER",
+                "nc6"
+            ],
+            [
+                "SSH_AUTH_SOCK",
+                "/tmp/launch-zZ17KX/Listeners"
+            ],
+            [
+                "__CF_USER_TEXT_ENCODING",
+                "0x37AB:0:0"
+            ],
+            [
+                "__CHECKFIX1436934",
+                "1"
+            ],
+            [
+                "PATH",
+                "/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/usr/local/MacGPG2/bin:/usr/local/munki:/usr/texbin:/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/local/share/npm/bin:/usr/local/share/npm/bin"
+            ],
+            [
+                "PWD",
+                "/Users/nc6/work/tabula"
+            ],
+            [
+                "LANG",
+                "en_GB.UTF-8"
+            ],
+            [
+                "ITERM_PROFILE",
+                "Default"
+            ],
+            [
+                "HTTPS_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "SHLVL",
+                "2"
+            ],
+            [
+                "HOME",
+                "/Users/nc6"
+            ],
+            [
+                "COLORFGBG",
+                "12;8"
+            ],
+            [
+                "HTTP_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "ITERM_SESSION_ID",
+                "w0t1p0"
+            ],
+            [
+                "LOGNAME",
+                "nc6"
+            ],
+            [
+                "PROMPT_COMMAND",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula prompt /tmp/tabula-4891511.soc $? $(history 1)"
+            ],
+            [
+                "DISPLAY",
+                "/tmp/launch-EdyySq/org.macosforge.xquartz:0"
+            ],
+            [
+                "_",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula"
+            ]
+        ],
+        "host": "mib105205i.local",
+        "stdout": "mib105205i:tabula nc6$ clear\r\n"
+    },
+    "version": 6,
+    "timestamp": "2014-01-15T12:35:44.781Z",
+    "namespace": "tabula::consoleRecord"
+},{
+    "entry": {
+        "exitStatus": 0,
+        "workingDirectory": "/Users/nc6/work/tabula",
+        "startTime": "2014-01-15T12:35:46.273Z",
+        "endTime": "2014-01-15T12:35:46.289Z",
+        "command": "503 ls",
+        "events": [
+            {
+                "subCommand": "ls",
+                "ppid": 27988,
+                "timestamp": "2014-01-15T12:35:46.273Z",
+                "envChanges": [],
+                "pid": 27989
+            }
+        ],
+        "stdin": "ls\r",
+        "posteriorEnv": [],
+        "stderr": "LICENSE\t\t\tTabula\t\t\ttabula.cabal\r\nREADME\t\t\tcabal.sandbox.config\ttabula.hs\r\nSetup.hs\t\tdist\t\t\ttest\r\n",
+        "priorEnv": [
+            [
+                "CAML_LD_LIBRARY_PATH",
+                "/Users/nc6/.opam/system/lib/stublibs:/usr/local/lib/ocaml/stublibs"
+            ],
+            [
+                "MANPATH",
+                "/Users/nc6/.opam/system/man:/usr/share/man:/usr/local/share/man:/Library/TeX/Distributions/.DefaultTeX/Contents/Man:/Users/nc6/.opam/system/man"
+            ],
+            [
+                "TERM_PROGRAM",
+                "iTerm.app"
+            ],
+            [
+                "GPG_AGENT_INFO",
+                "/Users/nc6/.gnupg/S.gpg-agent:434:1"
+            ],
+            [
+                "TERM",
+                "xterm"
+            ],
+            [
+                "SHELL",
+                "/usr/local/bin/bash"
+            ],
+            [
+                "TMPDIR",
+                "/var/folders/n7/0xd_j8cn5xs1v2xh787r7560000dxb/T/"
+            ],
+            [
+                "Apple_PubSub_Socket_Render",
+                "/tmp/launch-eKilSU/Render"
+            ],
+            [
+                "OCAML_TOPLEVEL_PATH",
+                "/Users/nc6/.opam/system/lib/toplevel"
+            ],
+            [
+                "USER",
+                "nc6"
+            ],
+            [
+                "SSH_AUTH_SOCK",
+                "/tmp/launch-zZ17KX/Listeners"
+            ],
+            [
+                "__CF_USER_TEXT_ENCODING",
+                "0x37AB:0:0"
+            ],
+            [
+                "__CHECKFIX1436934",
+                "1"
+            ],
+            [
+                "PATH",
+                "/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/usr/local/MacGPG2/bin:/usr/local/munki:/usr/texbin:/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/local/share/npm/bin:/usr/local/share/npm/bin"
+            ],
+            [
+                "PWD",
+                "/Users/nc6/work/tabula"
+            ],
+            [
+                "LANG",
+                "en_GB.UTF-8"
+            ],
+            [
+                "ITERM_PROFILE",
+                "Default"
+            ],
+            [
+                "HTTPS_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "SHLVL",
+                "2"
+            ],
+            [
+                "HOME",
+                "/Users/nc6"
+            ],
+            [
+                "COLORFGBG",
+                "12;8"
+            ],
+            [
+                "HTTP_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "ITERM_SESSION_ID",
+                "w0t1p0"
+            ],
+            [
+                "LOGNAME",
+                "nc6"
+            ],
+            [
+                "PROMPT_COMMAND",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula prompt /tmp/tabula-4891511.soc $? $(history 1)"
+            ],
+            [
+                "DISPLAY",
+                "/tmp/launch-EdyySq/org.macosforge.xquartz:0"
+            ],
+            [
+                "_",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula"
+            ]
+        ],
+        "host": "mib105205i.local",
+        "stdout": "mib105205i:tabula nc6$ ls\r\n"
+    },
+    "version": 6,
+    "timestamp": "2014-01-15T12:35:46.273Z",
+    "namespace": "tabula::consoleRecord"
+},{
+    "entry": {
+        "exitStatus": 0,
+        "workingDirectory": "/Users/nc6/work/tabula",
+        "startTime": "2014-01-15T12:35:47.849Z",
+        "endTime": "2014-01-15T12:35:47.863Z",
+        "command": "504 pwd",
+        "events": [
+            {
+                "subCommand": "pwd",
+                "ppid": 27988,
+                "timestamp": "2014-01-15T12:35:47.849Z",
+                "envChanges": [],
+                "pid": 27989
+            }
+        ],
+        "stdin": "pwd\r",
+        "posteriorEnv": [],
+        "stderr": "/Users/nc6/work/tabula\r\n",
+        "priorEnv": [
+            [
+                "CAML_LD_LIBRARY_PATH",
+                "/Users/nc6/.opam/system/lib/stublibs:/usr/local/lib/ocaml/stublibs"
+            ],
+            [
+                "MANPATH",
+                "/Users/nc6/.opam/system/man:/usr/share/man:/usr/local/share/man:/Library/TeX/Distributions/.DefaultTeX/Contents/Man:/Users/nc6/.opam/system/man"
+            ],
+            [
+                "TERM_PROGRAM",
+                "iTerm.app"
+            ],
+            [
+                "GPG_AGENT_INFO",
+                "/Users/nc6/.gnupg/S.gpg-agent:434:1"
+            ],
+            [
+                "TERM",
+                "xterm"
+            ],
+            [
+                "SHELL",
+                "/usr/local/bin/bash"
+            ],
+            [
+                "TMPDIR",
+                "/var/folders/n7/0xd_j8cn5xs1v2xh787r7560000dxb/T/"
+            ],
+            [
+                "Apple_PubSub_Socket_Render",
+                "/tmp/launch-eKilSU/Render"
+            ],
+            [
+                "OCAML_TOPLEVEL_PATH",
+                "/Users/nc6/.opam/system/lib/toplevel"
+            ],
+            [
+                "USER",
+                "nc6"
+            ],
+            [
+                "SSH_AUTH_SOCK",
+                "/tmp/launch-zZ17KX/Listeners"
+            ],
+            [
+                "__CF_USER_TEXT_ENCODING",
+                "0x37AB:0:0"
+            ],
+            [
+                "__CHECKFIX1436934",
+                "1"
+            ],
+            [
+                "PATH",
+                "/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/usr/local/MacGPG2/bin:/usr/local/munki:/usr/texbin:/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/local/share/npm/bin:/usr/local/share/npm/bin"
+            ],
+            [
+                "PWD",
+                "/Users/nc6/work/tabula"
+            ],
+            [
+                "LANG",
+                "en_GB.UTF-8"
+            ],
+            [
+                "ITERM_PROFILE",
+                "Default"
+            ],
+            [
+                "HTTPS_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "SHLVL",
+                "2"
+            ],
+            [
+                "HOME",
+                "/Users/nc6"
+            ],
+            [
+                "COLORFGBG",
+                "12;8"
+            ],
+            [
+                "HTTP_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "ITERM_SESSION_ID",
+                "w0t1p0"
+            ],
+            [
+                "LOGNAME",
+                "nc6"
+            ],
+            [
+                "PROMPT_COMMAND",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula prompt /tmp/tabula-4891511.soc $? $(history 1)"
+            ],
+            [
+                "DISPLAY",
+                "/tmp/launch-EdyySq/org.macosforge.xquartz:0"
+            ],
+            [
+                "_",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula"
+            ]
+        ],
+        "host": "mib105205i.local",
+        "stdout": "mib105205i:tabula nc6$ pwd\r\n"
+    },
+    "version": 6,
+    "timestamp": "2014-01-15T12:35:47.849Z",
+    "namespace": "tabula::consoleRecord"
+},{
+    "entry": {
+        "exitStatus": 0,
+        "workingDirectory": "/Users/nc6/work/tabula",
+        "startTime": "2014-01-15T12:36:11.537Z",
+        "endTime": "2014-01-15T12:36:11.564Z",
+        "command": "505 echo \"Hello World\" | wc | cut -f 1",
+        "events": [
+            {
+                "subCommand": "echo \"Hello World\"",
+                "ppid": 27988,
+                "timestamp": "2014-01-15T12:36:11.537Z",
+                "envChanges": [],
+                "pid": 27989
+            },
+            {
+                "subCommand": "wc",
+                "ppid": 27988,
+                "timestamp": "2014-01-15T12:36:11.544Z",
+                "envChanges": [],
+                "pid": 27989
+            },
+            {
+                "subCommand": "cut -f 1",
+                "ppid": 27988,
+                "timestamp": "2014-01-15T12:36:11.55Z",
+                "envChanges": [],
+                "pid": 27989
+            }
+        ],
+        "stdin": "echo \"Hello Worl",
+        "posteriorEnv": [],
+        "stderr": "       1       2      12\r\n",
+        "priorEnv": [
+            [
+                "CAML_LD_LIBRARY_PATH",
+                "/Users/nc6/.opam/system/lib/stublibs:/usr/local/lib/ocaml/stublibs"
+            ],
+            [
+                "MANPATH",
+                "/Users/nc6/.opam/system/man:/usr/share/man:/usr/local/share/man:/Library/TeX/Distributions/.DefaultTeX/Contents/Man:/Users/nc6/.opam/system/man"
+            ],
+            [
+                "TERM_PROGRAM",
+                "iTerm.app"
+            ],
+            [
+                "GPG_AGENT_INFO",
+                "/Users/nc6/.gnupg/S.gpg-agent:434:1"
+            ],
+            [
+                "TERM",
+                "xterm"
+            ],
+            [
+                "SHELL",
+                "/usr/local/bin/bash"
+            ],
+            [
+                "TMPDIR",
+                "/var/folders/n7/0xd_j8cn5xs1v2xh787r7560000dxb/T/"
+            ],
+            [
+                "Apple_PubSub_Socket_Render",
+                "/tmp/launch-eKilSU/Render"
+            ],
+            [
+                "OCAML_TOPLEVEL_PATH",
+                "/Users/nc6/.opam/system/lib/toplevel"
+            ],
+            [
+                "USER",
+                "nc6"
+            ],
+            [
+                "SSH_AUTH_SOCK",
+                "/tmp/launch-zZ17KX/Listeners"
+            ],
+            [
+                "__CF_USER_TEXT_ENCODING",
+                "0x37AB:0:0"
+            ],
+            [
+                "__CHECKFIX1436934",
+                "1"
+            ],
+            [
+                "PATH",
+                "/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/usr/local/MacGPG2/bin:/usr/local/munki:/usr/texbin:/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/local/share/npm/bin:/usr/local/share/npm/bin"
+            ],
+            [
+                "PWD",
+                "/Users/nc6/work/tabula"
+            ],
+            [
+                "LANG",
+                "en_GB.UTF-8"
+            ],
+            [
+                "ITERM_PROFILE",
+                "Default"
+            ],
+            [
+                "HTTPS_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "SHLVL",
+                "2"
+            ],
+            [
+                "HOME",
+                "/Users/nc6"
+            ],
+            [
+                "COLORFGBG",
+                "12;8"
+            ],
+            [
+                "HTTP_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "ITERM_SESSION_ID",
+                "w0t1p0"
+            ],
+            [
+                "LOGNAME",
+                "nc6"
+            ],
+            [
+                "PROMPT_COMMAND",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula prompt /tmp/tabula-4891511.soc $? $(history 1)"
+            ],
+            [
+                "DISPLAY",
+                "/tmp/launch-EdyySq/org.macosforge.xquartz:0"
+            ],
+            [
+                "_",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula"
+            ]
+        ],
+        "host": "mib105205i.local",
+        "stdout": "mib105205i:tabula nc6$ echo \"Hello Wor"
+    },
+    "version": 6,
+    "timestamp": "2014-01-15T12:36:11.537Z",
+    "namespace": "tabula::consoleRecord"
+},{
+    "entry": {
+        "exitStatus": 0,
+        "workingDirectory": "/Users/nc6/work/tabula",
+        "startTime": "2014-01-15T12:36:18.697Z",
+        "endTime": "2014-01-15T12:36:18.724Z",
+        "command": "506 echo \"Hello World\" | wc | cut -d' ' -f 1",
+        "events": [
+            {
+                "subCommand": "echo \"Hello World\"",
+                "ppid": 27988,
+                "timestamp": "2014-01-15T12:36:18.697Z",
+                "envChanges": [],
+                "pid": 27989
+            },
+            {
+                "subCommand": "wc",
+                "ppid": 27988,
+                "timestamp": "2014-01-15T12:36:18.703Z",
+                "envChanges": [],
+                "pid": 27989
+            },
+            {
+                "subCommand": "cut -d' ' -f 1",
+                "ppid": 27988,
+                "timestamp": "2014-01-15T12:36:18.71Z",
+                "envChanges": [],
+                "pid": 27989
+            }
+        ],
+        "stdin": "\u001b[A\u001b[D\u001b[D\u001b[C\u001b[D\u001b[D\u001b[D-d ' ' \r",
+        "posteriorEnv": [],
+        "stderr": "\r\n",
+        "priorEnv": [
+            [
+                "CAML_LD_LIBRARY_PATH",
+                "/Users/nc6/.opam/system/lib/stublibs:/usr/local/lib/ocaml/stublibs"
+            ],
+            [
+                "MANPATH",
+                "/Users/nc6/.opam/system/man:/usr/share/man:/usr/local/share/man:/Library/TeX/Distributions/.DefaultTeX/Contents/Man:/Users/nc6/.opam/system/man"
+            ],
+            [
+                "TERM_PROGRAM",
+                "iTerm.app"
+            ],
+            [
+                "GPG_AGENT_INFO",
+                "/Users/nc6/.gnupg/S.gpg-agent:434:1"
+            ],
+            [
+                "TERM",
+                "xterm"
+            ],
+            [
+                "SHELL",
+                "/usr/local/bin/bash"
+            ],
+            [
+                "TMPDIR",
+                "/var/folders/n7/0xd_j8cn5xs1v2xh787r7560000dxb/T/"
+            ],
+            [
+                "Apple_PubSub_Socket_Render",
+                "/tmp/launch-eKilSU/Render"
+            ],
+            [
+                "OCAML_TOPLEVEL_PATH",
+                "/Users/nc6/.opam/system/lib/toplevel"
+            ],
+            [
+                "USER",
+                "nc6"
+            ],
+            [
+                "SSH_AUTH_SOCK",
+                "/tmp/launch-zZ17KX/Listeners"
+            ],
+            [
+                "__CF_USER_TEXT_ENCODING",
+                "0x37AB:0:0"
+            ],
+            [
+                "__CHECKFIX1436934",
+                "1"
+            ],
+            [
+                "PATH",
+                "/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/usr/local/MacGPG2/bin:/usr/local/munki:/usr/texbin:/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/local/share/npm/bin:/usr/local/share/npm/bin"
+            ],
+            [
+                "PWD",
+                "/Users/nc6/work/tabula"
+            ],
+            [
+                "LANG",
+                "en_GB.UTF-8"
+            ],
+            [
+                "ITERM_PROFILE",
+                "Default"
+            ],
+            [
+                "HTTPS_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "SHLVL",
+                "2"
+            ],
+            [
+                "HOME",
+                "/Users/nc6"
+            ],
+            [
+                "COLORFGBG",
+                "12;8"
+            ],
+            [
+                "HTTP_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "ITERM_SESSION_ID",
+                "w0t1p0"
+            ],
+            [
+                "LOGNAME",
+                "nc6"
+            ],
+            [
+                "PROMPT_COMMAND",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula prompt /tmp/tabula-4891511.soc $? $(history 1)"
+            ],
+            [
+                "DISPLAY",
+                "/tmp/launch-EdyySq/org.macosforge.xquartz:0"
+            ],
+            [
+                "_",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula"
+            ]
+        ],
+        "host": "mib105205i.local",
+        "stdout": "mib105205i:tabula nc6$ echo \"Hello World\" | wc | cut -f 1\u0008\u0008\u001b[C\u0008\u0008\u0008\u001b[C\u001b[1@-\u0008\u001b[1@d\u001b[1@ \u0008\u001b[1P\u001b[1@'\u001b[1@ \u001b[1@'\u001b[1@ "
+    },
+    "version": 6,
+    "timestamp": "2014-01-15T12:36:18.697Z",
+    "namespace": "tabula::consoleRecord"
+},{
+    "entry": {
+        "exitStatus": 0,
+        "workingDirectory": "/Users/nc6/work/tabula",
+        "startTime": "2014-01-15T12:36:28.977Z",
+        "endTime": "2014-01-15T12:36:29.013Z",
+        "command": "507 echo \"Hello World\" | wc | tr -s ' ' | cut -d' ' -f 1",
+        "events": [
+            {
+                "subCommand": "echo \"Hello World\"",
+                "ppid": 27988,
+                "timestamp": "2014-01-15T12:36:28.977Z",
+                "envChanges": [],
+                "pid": 27989
+            },
+            {
+                "subCommand": "wc",
+                "ppid": 27988,
+                "timestamp": "2014-01-15T12:36:28.983Z",
+                "envChanges": [],
+                "pid": 27989
+            },
+            {
+                "subCommand": "tr -s ' '",
+                "ppid": 27988,
+                "timestamp": "2014-01-15T12:36:28.989Z",
+                "envChanges": [],
+                "pid": 27989
+            },
+            {
+                "subCommand": "cut -d' ' -f 1",
+                "ppid": 27988,
+                "timestamp": "2014-01-15T12:36:28.996Z",
+                "envChanges": [],
+                "pid": 27989
+            }
+        ],
+        "stdin": "\u001b[A\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D",
+        "posteriorEnv": [],
+        "stderr": "\r\n",
+        "priorEnv": [
+            [
+                "CAML_LD_LIBRARY_PATH",
+                "/Users/nc6/.opam/system/lib/stublibs:/usr/local/lib/ocaml/stublibs"
+            ],
+            [
+                "MANPATH",
+                "/Users/nc6/.opam/system/man:/usr/share/man:/usr/local/share/man:/Library/TeX/Distributions/.DefaultTeX/Contents/Man:/Users/nc6/.opam/system/man"
+            ],
+            [
+                "TERM_PROGRAM",
+                "iTerm.app"
+            ],
+            [
+                "GPG_AGENT_INFO",
+                "/Users/nc6/.gnupg/S.gpg-agent:434:1"
+            ],
+            [
+                "TERM",
+                "xterm"
+            ],
+            [
+                "SHELL",
+                "/usr/local/bin/bash"
+            ],
+            [
+                "TMPDIR",
+                "/var/folders/n7/0xd_j8cn5xs1v2xh787r7560000dxb/T/"
+            ],
+            [
+                "Apple_PubSub_Socket_Render",
+                "/tmp/launch-eKilSU/Render"
+            ],
+            [
+                "OCAML_TOPLEVEL_PATH",
+                "/Users/nc6/.opam/system/lib/toplevel"
+            ],
+            [
+                "USER",
+                "nc6"
+            ],
+            [
+                "SSH_AUTH_SOCK",
+                "/tmp/launch-zZ17KX/Listeners"
+            ],
+            [
+                "__CF_USER_TEXT_ENCODING",
+                "0x37AB:0:0"
+            ],
+            [
+                "__CHECKFIX1436934",
+                "1"
+            ],
+            [
+                "PATH",
+                "/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/usr/local/MacGPG2/bin:/usr/local/munki:/usr/texbin:/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/local/share/npm/bin:/usr/local/share/npm/bin"
+            ],
+            [
+                "PWD",
+                "/Users/nc6/work/tabula"
+            ],
+            [
+                "LANG",
+                "en_GB.UTF-8"
+            ],
+            [
+                "ITERM_PROFILE",
+                "Default"
+            ],
+            [
+                "HTTPS_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "SHLVL",
+                "2"
+            ],
+            [
+                "HOME",
+                "/Users/nc6"
+            ],
+            [
+                "COLORFGBG",
+                "12;8"
+            ],
+            [
+                "HTTP_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "ITERM_SESSION_ID",
+                "w0t1p0"
+            ],
+            [
+                "LOGNAME",
+                "nc6"
+            ],
+            [
+                "PROMPT_COMMAND",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula prompt /tmp/tabula-4891511.soc $? $(history 1)"
+            ],
+            [
+                "DISPLAY",
+                "/tmp/launch-EdyySq/org.macosforge.xquartz:0"
+            ],
+            [
+                "_",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula"
+            ]
+        ],
+        "host": "mib105205i.local",
+        "stdout": "mib105205i:tabula nc6$ echo \"Hello World\" | wc | cut -d' ' -f 1\u0008\u0008\u0008\u0008\u0008\u0008\u0008\u0008\u0008\u0008\u0008\u0008\u0008\u0008"
+    },
+    "version": 6,
+    "timestamp": "2014-01-15T12:36:28.977Z",
+    "namespace": "tabula::consoleRecord"
+},{
+    "entry": {
+        "exitStatus": 0,
+        "workingDirectory": "/Users/nc6/work/tabula",
+        "startTime": "2014-01-15T12:36:31.745Z",
+        "endTime": "2014-01-15T12:36:31.778Z",
+        "command": "508 echo \"Hello World\" | wc | tr -s ' ' | cut -d' ' -f 2",
+        "events": [
+            {
+                "subCommand": "echo \"Hello World\"",
+                "ppid": 27988,
+                "timestamp": "2014-01-15T12:36:31.745Z",
+                "envChanges": [],
+                "pid": 27989
+            },
+            {
+                "subCommand": "wc",
+                "ppid": 27988,
+                "timestamp": "2014-01-15T12:36:31.752Z",
+                "envChanges": [],
+                "pid": 27989
+            },
+            {
+                "subCommand": "tr -s ' '",
+                "ppid": 27988,
+                "timestamp": "2014-01-15T12:36:31.758Z",
+                "envChanges": [],
+                "pid": 27989
+            },
+            {
+                "subCommand": "cut -d' ' -f 2",
+                "ppid": 27988,
+                "timestamp": "2014-01-15T12:36:31.763Z",
+                "envChanges": [],
+                "pid": 27989
+            }
+        ],
+        "stdin": "\u001b[A\u001b[D\u001b[3~2\r",
+        "posteriorEnv": [],
+        "stderr": "1\r\n",
+        "priorEnv": [
+            [
+                "CAML_LD_LIBRARY_PATH",
+                "/Users/nc6/.opam/system/lib/stublibs:/usr/local/lib/ocaml/stublibs"
+            ],
+            [
+                "MANPATH",
+                "/Users/nc6/.opam/system/man:/usr/share/man:/usr/local/share/man:/Library/TeX/Distributions/.DefaultTeX/Contents/Man:/Users/nc6/.opam/system/man"
+            ],
+            [
+                "TERM_PROGRAM",
+                "iTerm.app"
+            ],
+            [
+                "GPG_AGENT_INFO",
+                "/Users/nc6/.gnupg/S.gpg-agent:434:1"
+            ],
+            [
+                "TERM",
+                "xterm"
+            ],
+            [
+                "SHELL",
+                "/usr/local/bin/bash"
+            ],
+            [
+                "TMPDIR",
+                "/var/folders/n7/0xd_j8cn5xs1v2xh787r7560000dxb/T/"
+            ],
+            [
+                "Apple_PubSub_Socket_Render",
+                "/tmp/launch-eKilSU/Render"
+            ],
+            [
+                "OCAML_TOPLEVEL_PATH",
+                "/Users/nc6/.opam/system/lib/toplevel"
+            ],
+            [
+                "USER",
+                "nc6"
+            ],
+            [
+                "SSH_AUTH_SOCK",
+                "/tmp/launch-zZ17KX/Listeners"
+            ],
+            [
+                "__CF_USER_TEXT_ENCODING",
+                "0x37AB:0:0"
+            ],
+            [
+                "__CHECKFIX1436934",
+                "1"
+            ],
+            [
+                "PATH",
+                "/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/usr/local/MacGPG2/bin:/usr/local/munki:/usr/texbin:/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/local/share/npm/bin:/usr/local/share/npm/bin"
+            ],
+            [
+                "PWD",
+                "/Users/nc6/work/tabula"
+            ],
+            [
+                "LANG",
+                "en_GB.UTF-8"
+            ],
+            [
+                "ITERM_PROFILE",
+                "Default"
+            ],
+            [
+                "HTTPS_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "SHLVL",
+                "2"
+            ],
+            [
+                "HOME",
+                "/Users/nc6"
+            ],
+            [
+                "COLORFGBG",
+                "12;8"
+            ],
+            [
+                "HTTP_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "ITERM_SESSION_ID",
+                "w0t1p0"
+            ],
+            [
+                "LOGNAME",
+                "nc6"
+            ],
+            [
+                "PROMPT_COMMAND",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula prompt /tmp/tabula-4891511.soc $? $(history 1)"
+            ],
+            [
+                "DISPLAY",
+                "/tmp/launch-EdyySq/org.macosforge.xquartz:0"
+            ],
+            [
+                "_",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula"
+            ]
+        ],
+        "host": "mib105205i.local",
+        "stdout": "mib105205i:tabula nc6$ echo \"Hello World\" | wc | tr -s ' ' | cut -d' ' -f 1\u0008\u001b[K2\r\n"
+    },
+    "version": 6,
+    "timestamp": "2014-01-15T12:36:31.745Z",
+    "namespace": "tabula::consoleRecord"
+},{
+    "entry": {
+        "exitStatus": 0,
+        "workingDirectory": "/Users/nc6/work/tabula",
+        "startTime": "2014-01-15T12:36:48.424Z",
+        "endTime": "2014-01-15T12:36:48.473Z",
+        "command": "509 ps -ef",
+        "events": [
+            {
+                "subCommand": "ps -ef",
+                "ppid": 27988,
+                "timestamp": "2014-01-15T12:36:48.424Z",
+                "envChanges": [],
+                "pid": 27989
+            }
+        ],
+        "stdin": "ps -ef\r",
+        "posteriorEnv": [],
+        "stderr": "  UID   PID  PPID   C STIME   TTY           TIME CMD\r\n    0     1     0   0  7Jan14 ??         4:27.34 /sbin/launchd\r\n    0    11     1   0  7Jan14 ??         0:20.10 /usr/libexec/UserEventAgent (System)\r\n    0    12     1   0  7Jan14 ??         0:09.06 /usr/libexec/kextd\r\n    0    13     1   0  7Jan14 ??         0:19.35 /usr/libexec/taskgated -s\r\n    0    14     1   0  7Jan14 ??         0:23.61 /usr/sbin/notifyd\r\n    0    15     1   0  7Jan14 ??         0:05.67 /usr/sbin/securityd -i\r\n    0    16     1   0  7Jan14 ??         0:06.96 /System/Library/CoreServices/powerd.bundle/powerd\r\n    0    17     1   0  7Jan14 ??         0:14.09 /usr/sbin/syslogd\r\n    0    18     1   0  7Jan14 ??         0:03.96 /usr/libexec/diskarbitrationd\r\n    0    19     1   0  7Jan14 ??         0:36.65 /usr/libexec/configd\r\n    0    21     1   0  7Jan14 ??         1:35.17 /usr/sbin/distnoted daemon\r\n    0    24     1   0  7Jan14 ??         0:19.60 /usr/sbin/cfprefsd daemon\r\n    0    25     1   0  7Jan14 ??         0:00.19 /usr/libexec/xpcd\r\n    0    29     1   0  7Jan14 ??         0:04.35 com.apple.authd\r\n    0    34     1   0  7Jan14 ??         0:11.07 /System/Library/CoreServices/coreservicesd\r\n    0    40     1   0  7Jan14 ??         0:00.02 /usr/libexec/wdhelper\r\n    0    41     1   0  7Jan14 ??         0:00.68 /usr/libexec/warmd\r\n    0    45     1   0  7Jan14 ??         0:00.37 /usr/libexec/stackshot -t\r\n    0    48     1   0  7Jan14 ??         0:00.97 /System/Library/CoreServices/SleepServicesD\r\n    0    50     1   0  7Jan14 ??         0:00.13 /System/Library/PrivateFrameworks/GenerationalStorage.framework/Versions/A/Support/revisiond\r\n    0    55     1   0  7Jan14 ??         3:04.15 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Support/mds\r\n   65    56     1   0  7Jan14 ??         0:08.18 /usr/sbin/mDNSResponder\r\n14251    59     1   0  7Jan14 ??         0:23.81 /System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow console\r\n    0    60     1   0  7Jan14 ??         0:00.15 /System/Library/CoreServices/logind\r\n  205    61     1   0  7Jan14 ??         0:14.41 /usr/libexec/locationd\r\n    0    62     1   0  7Jan14 ??         0:00.03 /usr/sbin/KernelEventAgent\r\n    0    63     1   0  7Jan14 ??         0:00.46 /System/Library/PrivateFrameworks/Heimdal.framework/Helpers/kdc\r\n    0    65     1   0  7Jan14 ??        12:03.17 /usr/libexec/hidd\r\n    0    66     1   0  7Jan14 ??         0:53.66 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/Support/fseventsd\r\n    0    68     1   0  7Jan14 ??         0:00.01 /sbin/dynamic_pager -F /private/var/vm/swapfile\r\n    0    71     1   0  7Jan14 ??         0:33.16 /System/Library/CoreServices/launchservicesd\r\n   55    72     1   0  7Jan14 ??         0:00.47 /System/Library/CoreServices/appleeventsd --server\r\n    0    75     1   0  7Jan14 ??         0:01.77 /usr/sbin/blued\r\n",
+        "priorEnv": [
+            [
+                "CAML_LD_LIBRARY_PATH",
+                "/Users/nc6/.opam/system/lib/stublibs:/usr/local/lib/ocaml/stublibs"
+            ],
+            [
+                "MANPATH",
+                "/Users/nc6/.opam/system/man:/usr/share/man:/usr/local/share/man:/Library/TeX/Distributions/.DefaultTeX/Contents/Man:/Users/nc6/.opam/system/man"
+            ],
+            [
+                "TERM_PROGRAM",
+                "iTerm.app"
+            ],
+            [
+                "GPG_AGENT_INFO",
+                "/Users/nc6/.gnupg/S.gpg-agent:434:1"
+            ],
+            [
+                "TERM",
+                "xterm"
+            ],
+            [
+                "SHELL",
+                "/usr/local/bin/bash"
+            ],
+            [
+                "TMPDIR",
+                "/var/folders/n7/0xd_j8cn5xs1v2xh787r7560000dxb/T/"
+            ],
+            [
+                "Apple_PubSub_Socket_Render",
+                "/tmp/launch-eKilSU/Render"
+            ],
+            [
+                "OCAML_TOPLEVEL_PATH",
+                "/Users/nc6/.opam/system/lib/toplevel"
+            ],
+            [
+                "USER",
+                "nc6"
+            ],
+            [
+                "SSH_AUTH_SOCK",
+                "/tmp/launch-zZ17KX/Listeners"
+            ],
+            [
+                "__CF_USER_TEXT_ENCODING",
+                "0x37AB:0:0"
+            ],
+            [
+                "__CHECKFIX1436934",
+                "1"
+            ],
+            [
+                "PATH",
+                "/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/usr/local/MacGPG2/bin:/usr/local/munki:/usr/texbin:/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/local/share/npm/bin:/usr/local/share/npm/bin"
+            ],
+            [
+                "PWD",
+                "/Users/nc6/work/tabula"
+            ],
+            [
+                "LANG",
+                "en_GB.UTF-8"
+            ],
+            [
+                "ITERM_PROFILE",
+                "Default"
+            ],
+            [
+                "HTTPS_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "SHLVL",
+                "2"
+            ],
+            [
+                "HOME",
+                "/Users/nc6"
+            ],
+            [
+                "COLORFGBG",
+                "12;8"
+            ],
+            [
+                "HTTP_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "ITERM_SESSION_ID",
+                "w0t1p0"
+            ],
+            [
+                "LOGNAME",
+                "nc6"
+            ],
+            [
+                "PROMPT_COMMAND",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula prompt /tmp/tabula-4891511.soc $? $(history 1)"
+            ],
+            [
+                "DISPLAY",
+                "/tmp/launch-EdyySq/org.macosforge.xquartz:0"
+            ],
+            [
+                "_",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula"
+            ]
+        ],
+        "host": "mib105205i.local",
+        "stdout": "mib105205i:tabula nc6$ ps -ef\r\n"
+    },
+    "version": 6,
+    "timestamp": "2014-01-15T12:36:48.424Z",
+    "namespace": "tabula::consoleRecord"
+},{
+    "entry": {
+        "exitStatus": 0,
+        "workingDirectory": "/Users/nc6/work/tabula",
+        "startTime": "2014-01-15T12:37:12.744Z",
+        "endTime": "2014-01-15T12:37:12.76Z",
+        "command": "510 ls",
+        "events": [
+            {
+                "subCommand": "ls",
+                "ppid": 27988,
+                "timestamp": "2014-01-15T12:37:12.744Z",
+                "envChanges": [],
+                "pid": 27989
+            }
+        ],
+        "stdin": "ls\r",
+        "posteriorEnv": [],
+        "stderr": "LICENSE\t\t\tTabula\t\t\ttabula.cabal\r\nREADME\t\t\tcabal.sandbox.config\ttabula.hs\r\nSetup.hs\t\tdist\t\t\ttest\r\n",
+        "priorEnv": [
+            [
+                "CAML_LD_LIBRARY_PATH",
+                "/Users/nc6/.opam/system/lib/stublibs:/usr/local/lib/ocaml/stublibs"
+            ],
+            [
+                "MANPATH",
+                "/Users/nc6/.opam/system/man:/usr/share/man:/usr/local/share/man:/Library/TeX/Distributions/.DefaultTeX/Contents/Man:/Users/nc6/.opam/system/man"
+            ],
+            [
+                "TERM_PROGRAM",
+                "iTerm.app"
+            ],
+            [
+                "GPG_AGENT_INFO",
+                "/Users/nc6/.gnupg/S.gpg-agent:434:1"
+            ],
+            [
+                "TERM",
+                "xterm"
+            ],
+            [
+                "SHELL",
+                "/usr/local/bin/bash"
+            ],
+            [
+                "TMPDIR",
+                "/var/folders/n7/0xd_j8cn5xs1v2xh787r7560000dxb/T/"
+            ],
+            [
+                "Apple_PubSub_Socket_Render",
+                "/tmp/launch-eKilSU/Render"
+            ],
+            [
+                "OCAML_TOPLEVEL_PATH",
+                "/Users/nc6/.opam/system/lib/toplevel"
+            ],
+            [
+                "USER",
+                "nc6"
+            ],
+            [
+                "SSH_AUTH_SOCK",
+                "/tmp/launch-zZ17KX/Listeners"
+            ],
+            [
+                "__CF_USER_TEXT_ENCODING",
+                "0x37AB:0:0"
+            ],
+            [
+                "__CHECKFIX1436934",
+                "1"
+            ],
+            [
+                "PATH",
+                "/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/usr/local/MacGPG2/bin:/usr/local/munki:/usr/texbin:/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/local/share/npm/bin:/usr/local/share/npm/bin"
+            ],
+            [
+                "PWD",
+                "/Users/nc6/work/tabula"
+            ],
+            [
+                "LANG",
+                "en_GB.UTF-8"
+            ],
+            [
+                "ITERM_PROFILE",
+                "Default"
+            ],
+            [
+                "HTTPS_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "SHLVL",
+                "2"
+            ],
+            [
+                "HOME",
+                "/Users/nc6"
+            ],
+            [
+                "COLORFGBG",
+                "12;8"
+            ],
+            [
+                "HTTP_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "ITERM_SESSION_ID",
+                "w0t1p0"
+            ],
+            [
+                "LOGNAME",
+                "nc6"
+            ],
+            [
+                "PROMPT_COMMAND",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula prompt /tmp/tabula-4891511.soc $? $(history 1)"
+            ],
+            [
+                "DISPLAY",
+                "/tmp/launch-EdyySq/org.macosforge.xquartz:0"
+            ],
+            [
+                "_",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula"
+            ]
+        ],
+        "host": "mib105205i.local",
+        "stdout": "mib105205i:tabula nc6$ ls\r\n"
+    },
+    "version": 6,
+    "timestamp": "2014-01-15T12:37:12.744Z",
+    "namespace": "tabula::consoleRecord"
+},{
+    "entry": {
+        "exitStatus": 0,
+        "workingDirectory": "/Users/nc6/work/tabula",
+        "startTime": "2014-01-15T12:37:26.552Z",
+        "endTime": "2014-01-15T12:37:26.568Z",
+        "command": "511 grep -i conduit tabula.cabal",
+        "events": [
+            {
+                "subCommand": "grep -i conduit tabula.cabal",
+                "ppid": 27988,
+                "timestamp": "2014-01-15T12:37:26.552Z",
+                "envChanges": [],
+                "pid": 27989
+            }
+        ],
+        "stdin": "grep \"con-i ",
+        "posteriorEnv": [],
+        "stderr": "                      , attoparsec-conduit\r\n                      , conduit \u003e= 1.0.9.3\r\n                      , stm-conduit\r\n",
+        "priorEnv": [
+            [
+                "CAML_LD_LIBRARY_PATH",
+                "/Users/nc6/.opam/system/lib/stublibs:/usr/local/lib/ocaml/stublibs"
+            ],
+            [
+                "MANPATH",
+                "/Users/nc6/.opam/system/man:/usr/share/man:/usr/local/share/man:/Library/TeX/Distributions/.DefaultTeX/Contents/Man:/Users/nc6/.opam/system/man"
+            ],
+            [
+                "TERM_PROGRAM",
+                "iTerm.app"
+            ],
+            [
+                "GPG_AGENT_INFO",
+                "/Users/nc6/.gnupg/S.gpg-agent:434:1"
+            ],
+            [
+                "TERM",
+                "xterm"
+            ],
+            [
+                "SHELL",
+                "/usr/local/bin/bash"
+            ],
+            [
+                "TMPDIR",
+                "/var/folders/n7/0xd_j8cn5xs1v2xh787r7560000dxb/T/"
+            ],
+            [
+                "Apple_PubSub_Socket_Render",
+                "/tmp/launch-eKilSU/Render"
+            ],
+            [
+                "OCAML_TOPLEVEL_PATH",
+                "/Users/nc6/.opam/system/lib/toplevel"
+            ],
+            [
+                "USER",
+                "nc6"
+            ],
+            [
+                "SSH_AUTH_SOCK",
+                "/tmp/launch-zZ17KX/Listeners"
+            ],
+            [
+                "__CF_USER_TEXT_ENCODING",
+                "0x37AB:0:0"
+            ],
+            [
+                "__CHECKFIX1436934",
+                "1"
+            ],
+            [
+                "PATH",
+                "/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/usr/local/MacGPG2/bin:/usr/local/munki:/usr/texbin:/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/local/share/npm/bin:/usr/local/share/npm/bin"
+            ],
+            [
+                "PWD",
+                "/Users/nc6/work/tabula"
+            ],
+            [
+                "LANG",
+                "en_GB.UTF-8"
+            ],
+            [
+                "ITERM_PROFILE",
+                "Default"
+            ],
+            [
+                "HTTPS_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "SHLVL",
+                "2"
+            ],
+            [
+                "HOME",
+                "/Users/nc6"
+            ],
+            [
+                "COLORFGBG",
+                "12;8"
+            ],
+            [
+                "HTTP_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "ITERM_SESSION_ID",
+                "w0t1p0"
+            ],
+            [
+                "LOGNAME",
+                "nc6"
+            ],
+            [
+                "PROMPT_COMMAND",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula prompt /tmp/tabula-4891511.soc $? $(history 1)"
+            ],
+            [
+                "DISPLAY",
+                "/tmp/launch-EdyySq/org.macosforge.xquartz:0"
+            ],
+            [
+                "_",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula"
+            ]
+        ],
+        "host": "mib105205i.local",
+        "stdout": "mib105205i:tabula nc6$ grep \"\u0008\u001b[Kcon\u0008\u001b[K\u0008\u001b[K\u0008\u001b[K-i"
+    },
+    "version": 6,
+    "timestamp": "2014-01-15T12:37:26.552Z",
+    "namespace": "tabula::consoleRecord"
+},{
+    "entry": {
+        "exitStatus": 0,
+        "workingDirectory": "/Users/nc6/work/tabula",
+        "startTime": "2014-01-15T12:37:31.8Z",
+        "endTime": "2014-01-15T12:37:31.822Z",
+        "command": "512 grep -i conduit tabula.cabal | wc -l",
+        "events": [
+            {
+                "subCommand": "grep -i conduit tabula.cabal",
+                "ppid": 27988,
+                "timestamp": "2014-01-15T12:37:31.8Z",
+                "envChanges": [],
+                "pid": 27989
+            },
+            {
+                "subCommand": "wc -l",
+                "ppid": 27988,
+                "timestamp": "2014-01-15T12:37:31.807Z",
+                "envChanges": [],
+                "pid": 27989
+            }
+        ],
+        "stdin": "\u001b[A| wc -l\r",
+        "posteriorEnv": [],
+        "stderr": "       3\r\n",
+        "priorEnv": [
+            [
+                "CAML_LD_LIBRARY_PATH",
+                "/Users/nc6/.opam/system/lib/stublibs:/usr/local/lib/ocaml/stublibs"
+            ],
+            [
+                "MANPATH",
+                "/Users/nc6/.opam/system/man:/usr/share/man:/usr/local/share/man:/Library/TeX/Distributions/.DefaultTeX/Contents/Man:/Users/nc6/.opam/system/man"
+            ],
+            [
+                "TERM_PROGRAM",
+                "iTerm.app"
+            ],
+            [
+                "GPG_AGENT_INFO",
+                "/Users/nc6/.gnupg/S.gpg-agent:434:1"
+            ],
+            [
+                "TERM",
+                "xterm"
+            ],
+            [
+                "SHELL",
+                "/usr/local/bin/bash"
+            ],
+            [
+                "TMPDIR",
+                "/var/folders/n7/0xd_j8cn5xs1v2xh787r7560000dxb/T/"
+            ],
+            [
+                "Apple_PubSub_Socket_Render",
+                "/tmp/launch-eKilSU/Render"
+            ],
+            [
+                "OCAML_TOPLEVEL_PATH",
+                "/Users/nc6/.opam/system/lib/toplevel"
+            ],
+            [
+                "USER",
+                "nc6"
+            ],
+            [
+                "SSH_AUTH_SOCK",
+                "/tmp/launch-zZ17KX/Listeners"
+            ],
+            [
+                "__CF_USER_TEXT_ENCODING",
+                "0x37AB:0:0"
+            ],
+            [
+                "__CHECKFIX1436934",
+                "1"
+            ],
+            [
+                "PATH",
+                "/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/usr/local/MacGPG2/bin:/usr/local/munki:/usr/texbin:/Users/nc6/Library/Haskell/bin:/Users/nc6/.opam/system/bin:/opt/local/bin:/usr/local/sbin:/Users/nc6/.cabal/bin:/usr/local/share/npm/bin:/usr/local/share/npm/bin"
+            ],
+            [
+                "PWD",
+                "/Users/nc6/work/tabula"
+            ],
+            [
+                "LANG",
+                "en_GB.UTF-8"
+            ],
+            [
+                "ITERM_PROFILE",
+                "Default"
+            ],
+            [
+                "HTTPS_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "SHLVL",
+                "2"
+            ],
+            [
+                "HOME",
+                "/Users/nc6"
+            ],
+            [
+                "COLORFGBG",
+                "12;8"
+            ],
+            [
+                "HTTP_PROXY",
+                "wwwcache.sanger.ac.uk:3128"
+            ],
+            [
+                "ITERM_SESSION_ID",
+                "w0t1p0"
+            ],
+            [
+                "LOGNAME",
+                "nc6"
+            ],
+            [
+                "PROMPT_COMMAND",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula prompt /tmp/tabula-4891511.soc $? $(history 1)"
+            ],
+            [
+                "DISPLAY",
+                "/tmp/launch-EdyySq/org.macosforge.xquartz:0"
+            ],
+            [
+                "_",
+                "/Users/nc6/work/tabula/dist/build/tabula/tabula"
+            ]
+        ],
+        "host": "mib105205i.local",
+        "stdout": "mib105205i:tabula nc6$ grep -i conduit tabula.cabal | wc -l\r\n"
+    },
+    "version": 6,
+    "timestamp": "2014-01-15T12:37:31.8Z",
+    "namespace": "tabula::consoleRecord"
+}]
