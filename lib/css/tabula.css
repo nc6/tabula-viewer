@@ -37,17 +37,29 @@ div.tabula-entry .panel-footer {
 }
 
 div.tabula-entry .tabula-entry-body {
-  padding: 10px;
   font-size: 14pt;
+  display: table-row;
 }
 
 div.tabula-entry .tabula-entry-body .tabula-cwd {
+  border-right: 1px solid #e3e3e3;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  display: table-cell;
+}
 
+div.tabula-entry .tabula-entry-body .tabula-command {
+  padding: 10px;
+  display: table-cell;
+  width: 100%;
 }
 
 div.tabula-entry .tabula-entry-body .tabula-exitstatus {
-  float: right;
   font-size: 14pt;
+  display: table-cell;
+  padding: 10px;
 }
 
 div.tabula-entry .tabula-entry-header, div.tabula-entry .tabula-entry-footer {
