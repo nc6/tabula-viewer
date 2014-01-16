@@ -98,10 +98,14 @@ div.tabula-entry .tabula-entry-footer {
   padding-bottom: 5px;
 }
 
+div.tabula-entry .tabula-entry-footer .btn {
+  padding: 3px;
+  line-height: 1;
+}
+
 .container {
   width:80%;
 }
-
 
 .lozenge {
   background: #ccc;
