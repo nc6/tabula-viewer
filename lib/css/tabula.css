@@ -144,3 +144,7 @@ div.tabula-entry .exitFailure .lozenge {
   border-color: #d04437;
   color: #fff;
 }
+
+div.tabula-entry .tabula-env-btn {
+  margin-right: 20px;
+}
