@@ -55,12 +55,12 @@
         </span>
       </div>
       Search:
-      <input ng-model="query">
+      <input type="text" ng-model="search">
     </div>
   </div>
   </div>
   <!-- /container -->
-  <div class="container" id="project-data" ng-repeat="entry in entries | filter:query">
+  <div class="container" id="project-data" ng-repeat="entry in entries | filter: { entry.command: search }">
     <h1 class="log-heading"></h1>
     <div class="tabula-entry panel panel-default">
       <div class="panel-body">
