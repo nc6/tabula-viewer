@@ -54,10 +54,13 @@
           <button type="button" class="btn btn-primary" id="btn-load-project">Load log</button>
         </span>
       </div>
+      Search:
+      <input ng-model="query">
     </div>
   </div>
+  </div>
   <!-- /container -->
-  <div class="container" id="project-data" ng-repeat="entry in entries">
+  <div class="container" id="project-data" ng-repeat="entry in entries | filter:query">
     <h1 class="log-heading"></h1>
     <div class="tabula-entry panel panel-default">
       <div class="panel-body">
