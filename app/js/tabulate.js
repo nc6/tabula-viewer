@@ -36,8 +36,8 @@
       entryDiv.find("span.tabula-entry-endtime")
         .html(processTime(entry.entry.endTime).time);
 
-      // Add the directory thing  
-      var cwd = processCwd(entry.entry.workingDirectory)
+      // Add the directory thing
+      var cwd = processCwd(entry.entry.workingDirectory);
       entryDiv.find(".tabula-cwd")
         .html(cwd.short)
         .data("full", cwd.full)
@@ -123,7 +123,7 @@
 
   function processCwd(cwd) {
     var comps = cwd.split("/");
-    return { "full" : cwd, "short" : "../" + comps[comps.length - 1]}
+    return { "full" : cwd, "short" : "../" + comps[comps.length - 1]};
   }
 
   String.prototype.hashCode = function(){

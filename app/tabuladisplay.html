@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html ng-app="tabulaApp" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -11,12 +11,13 @@
   <title>tabula viewer</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="lib/css/bootstrap.css" rel="stylesheet">
-  <link href="lib/css/tabula.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/tabula.css" rel="stylesheet">
   <script src="lib/angular/angular.js"></script>
+  <script src="js/controllers.js"></script>
 </head>
 
-<body>
+<body ng-controller="TabulaCtrl">
 
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
@@ -56,20 +57,22 @@
     </div>
   </div>
   <!-- /container -->
-  <div class="container" id="project-data">
+  <div class="container" id="project-data" ng-repeat="entry in entries">
     <h1 class="log-heading"></h1>
-    <div class="tabula-entry panel panel-default" ng-repeat="">
+    <div class="tabula-entry panel panel-default">
       <div class="panel-body">
         <div class="tabula-entry-header">
-          <span class="tabula-entry-starttime"></span>
+          <span class="tabula-entry-starttime">{{entry.entry.startTime}}</span>
           <span>to</span>
-          <span class="tabula-entry-endtime"></span>
+          <span class="tabula-entry-endtime">{{entry.entry.endTime}}</span>
           <span class="tabula-entry-duration"></span>
         </div>
         <div class="tabula-entry-body">
-          <span class="tabula-cwd"></span>
-          <span class="tabula-command"></span>
-          <span class="tabula-exitstatus"></span>
+          <span class="tabula-cwd">{{entry.entry.workingDirectory}}</span>
+          <span class="tabula-command">{{entry.entry.command}}</span>
+          <span class="tabula-exitstatus">
+            <span class="lozenge">{{entry.entry.exitStatus}}</span>
+          </span>
         </div>
         <div class="tabula-entry-footer">
           <ul class="nav nav-tabs">
@@ -99,8 +102,8 @@
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
-  <script src="lib/js/bootstrap.min.js"></script>
-  <script src="lib/js/tabulate.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/tabulate.js"></script>
 </body>
 
 </html>
