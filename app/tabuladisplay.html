@@ -47,22 +47,34 @@
   <div class="container">
     <div class="grey-box">
       <h1>Tabula log viewer</h1>
-      <p>Enter tabula project log name:</p>
-      <div class="input-group">
-        <input type="text" id="project-name" class="form-control" placeholder="example.json">
-        <span class="input-group-btn">
-          <button type="button" class="btn btn-primary" id="btn-load-project">Load log</button>
-        </span>
-      </div>
-      Search:
-      <input type="text" ng-model="search">
+      <p>Enter tabula project log name.</p>
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label for="search-box" class="control-label col-xs-4 col-sm-3 col-md-1">Project log</label>
+          <div class="col-xs-4 col-sm-6 col-md-8">
+            <input type="text" id="project-name" class="form-control" placeholder="example.json">
+
+          </div>
+          <span class="input-group-btn col-xs-4 col-sm-3 col-md-2">
+            <button type="button" class="btn btn-primary" id="btn-load-project">Load log</button>
+          </span>
+        </div>
+      </form>
     </div>
   </div>
   </div>
   <!-- /container -->
-  <div class="container" id="project-data" ng-repeat="entry in entries | filter: { entry.command: search }">
-    <h1 class="log-heading"></h1>
-    <div class="tabula-entry panel panel-default">
+  <div class="container">
+    <h1 class="log-heading">Project log</h1>
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label for="search-box" class="control-label col-xs-4 col-sm-3 col-md-1">Filter log</label>
+          <div class="col-xs-4">
+            <input type="text" class="form-control" id="search-box" ng-model="search">
+          </div>
+        </div>
+      </form>
+    <div class="tabula-entry panel panel-default" id="project-data" ng-repeat="entry in entries | filter: { entry.command: search }">
       <div class="panel-body">
         <div class="tabula-entry-header">
           <span class="tabula-entry-starttime">{{entry.entry.startTime}}</span>
