@@ -47,7 +47,7 @@
   <div class="container">
     <div class="grey-box">
       <h1>Tabula log viewer</h1>
-      <p>Enter tabula project log name.</p>
+      <p>Enter a tabula project log name.</p>
       <form class="form-horizontal" role="form">
         <div class="form-group">
           <label for="search-box" class="control-label col-xs-4 col-sm-3 col-md-1">Project log</label>
@@ -67,25 +67,32 @@
   <div class="container">
     <h1 class="log-heading">Project log</h1>
     <form class="form-horizontal" role="form">
-        <div class="form-group">
-          <label for="search-box" class="control-label col-xs-4 col-sm-3 col-md-1">Filter log</label>
-          <div class="col-xs-4">
-            <input type="text" class="form-control" id="search-box" ng-model="search">
-          </div>
+      <div class="form-group">
+        <label for="search-box" class="control-label col-xs-4 col-sm-3 col-md-1">Filter log</label>
+        <div class="col-xs-4">
+          <input type="text" class="form-control" id="search-box" ng-model="search">
         </div>
-      </form>
-    <div class="tabula-entry panel panel-default" id="project-data" ng-repeat="entry in entries | filter: { entry.command: search }">
+        <label for="search-box" class="control-label col-xs-4 col-sm-3 col-md-1">Order by</label>
+        <div class="col-xs-2">
+          <select class="form-control" ng-model="orderProp">
+            <option value="entry.startTime">Newest</option>
+            <option value="entry.workingDirectory">Directory</option>
+          </select>
+        </div>
+      </div>
+    </form>
+    <div class="tabula-entry panel panel-default" id="project-data" ng-repeat="entry in entries | filter: { entry.command: search } | orderBy:orderProp">
       <div class="panel-body">
         <div class="tabula-entry-header">
-          <span class="tabula-entry-starttime">{{entry.entry.startTime}}</span>
+          <span class="tabula-entry-starttime">{{getTime(entry.entry.startTime)}}</span>
           <span>to</span>
-          <span class="tabula-entry-endtime">{{entry.entry.endTime}}</span>
+          <span class="tabula-entry-endtime">{{getTime(entry.entry.endTime)}}</span>
           <span class="tabula-entry-duration"></span>
         </div>
         <div class="tabula-entry-body">
-          <span class="tabula-cwd">{{entry.entry.workingDirectory}}</span>
+          <span class="tabula-cwd">{{getShortDir(entry.entry.workingDirectory)}}</span>
           <span class="tabula-command">{{entry.entry.command}}</span>
-          <span class="tabula-exitstatus">
+          <span class="tabula-exitstatus {{exitStatus(entry.entry.exitStatus)}}">
             <span class="lozenge">{{entry.entry.exitStatus}}</span>
           </span>
         </div>
