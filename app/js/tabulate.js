@@ -13,6 +13,11 @@
         $.getJSON(project, renderData);
       }
     });
+    
+    $('.lozenge').click(function() {
+      this.popover('show');
+    });
+    
   });
 
   function renderData(data) {

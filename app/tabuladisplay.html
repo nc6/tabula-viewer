@@ -72,18 +72,21 @@
         <div class="col-xs-4">
           <input type="text" class="form-control" id="search-box" ng-model="search">
         </div>
-        <label for="search-box" class="control-label col-xs-4 col-sm-3 col-md-1">Order by</label>
+        <label for="search-box" class="control-label col-xs-4 col-sm-3 col-md-1">Filter by</label>
         <div class="col-xs-2">
-          <select class="form-control" ng-model="orderProp">
-            <option value="entry.startTime">Newest</option>
-            <option value="entry.workingDirectory">Directory</option>
+          <select class="form-control" ng-model="filterType">
+            <option value="command">Command</option>
+            <!--
+            <option value="workingDirectory">Directory</option>
+            <option value="priorEnv">Environment</option>
+-->
           </select>
         </div>
       </div>
     </form>
-    <div class="tabula-entry panel panel-default" id="project-data" ng-repeat="entry in entries | filter: { entry.command: search } | orderBy:orderProp">
+    <div class="tabula-entry panel panel-default" id="project-data" ng-repeat="entry in entries | filter: { entry.command : search }">
       <div class="panel-body">
-        <div class="tabula-entry-header">
+        <div class="tabula-entry-header" id="{{getId(entry)}}">
           <span class="tabula-entry-starttime">{{getTime(entry.entry.startTime)}}</span>
           <span>to</span>
           <span class="tabula-entry-endtime">{{getTime(entry.entry.endTime)}}</span>
@@ -93,13 +96,13 @@
           <span class="tabula-cwd">{{getShortDir(entry.entry.workingDirectory)}}</span>
           <span class="tabula-command">{{entry.entry.command}}</span>
           <span class="tabula-exitstatus {{exitStatus(entry.entry.exitStatus)}}">
-            <span class="lozenge">{{entry.entry.exitStatus}}</span>
+            <button class="lozenge" rel="popover" data-content="exitStatusInfo({{entry.entry.exitStatus}})">{{entry.entry.exitStatus}}</button>
           </span>
         </div>
         <div class="tabula-entry-footer">
           <ul class="nav nav-tabs">
             <li>
-              <a class="tabula-env-btn btn">Environment</a>
+              <a class="tabula-env-btn btn active">Environment</a>
             </li>
             <li>
               <a class="tabula-stdin-btn btn">stdin</a>
@@ -111,7 +114,30 @@
               <a class="tabula-stderr-btn btn">stderr</a>
             </li>
           </ul>
-          <div class="tabula-streams"></div>
+          <div class="tabula-streams">
+            <div class="tabula-env tab-pane">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Key</th>
+                    <th>Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="entry.priorEnv in entry">
+                    <td>{{entry.entry.priorEnv[0]}}</td>
+                    <td>{{entry.entry.priorEnv[1]}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tabula-stdin tab-pane">
+            </div>
+            <div class="tabula-stdout tab-pane">
+            </div>
+            <div class="tabula-stderr tab-pane">
+            </div>
+          </div>
         </div>
       </div>
       <div class="panel-footer"></div>
