@@ -11,9 +11,9 @@ tabulaApp.controller('TabulaCtrl', function ($scope, $http) {
   
   $scope.orderProp = 'entry.startTime';
   
-  $scope.getId = function(entry) {
-    return "tabula-entry-" + entry.timestamp.hashCode();
-  }
+  $scope.getId = function(entry, prefix) {
+    return prefix + entry.timestamp.hashCode();
+  };
 
   $scope.getShortDir = function (cwd) {
     var comps = cwd.split("/");
@@ -60,6 +60,12 @@ tabulaApp.controller('TabulaCtrl', function ($scope, $http) {
     default:
       return "Command failed";
     }
+  };
+  
+  $scope.selectedTab = 'tabula-env1293613254';
+  
+  $scope.changeTab = function(entry, tab) {
+    $scope.selectedTab = $scope.getId(entry, tab);
   };
 
 });

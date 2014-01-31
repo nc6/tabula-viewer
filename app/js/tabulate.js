@@ -3,9 +3,9 @@
     $('#template-entry-hidden').load("entry.template.html");
 
     $('#btn-load-project').click(function () {
-     var project = $('#project-name').val();
-     $.getJSON(project, renderData);
-   });
+      var project = $('#project-name').val();
+      $.getJSON(project, renderData);
+    });
 
     $('#project-name').keypress(function (e) {
       if (e.which == 13) {
@@ -13,11 +13,7 @@
         $.getJSON(project, renderData);
       }
     });
-    
-    $('.lozenge').click(function() {
-      this.popover('show');
-    });
-    
+
   });
 
   function renderData(data) {
@@ -26,7 +22,7 @@
     $("div#project-data .tabula-entry").remove();
     // For each entry
     $.each(data, function (index, entry) {
-      var id = "tabula-entry-"+entry.timestamp.hashCode();
+      var id = "tabula-entry-" + entry.timestamp.hashCode();
       // Clone the template
       var entryDiv = $('#template-entry-hidden').clone().children();
       entryDiv.attr("id", id);
@@ -47,7 +43,7 @@
         .html(cwd.short)
         .data("full", cwd.full)
         .data("short", cwd.short)
-        .click(function(evt){
+        .click(function (evt) {
           var btn = $(evt.target);
           if (btn.html() == btn.data("short")) {
             btn.html(btn.data("full"));
@@ -65,12 +61,12 @@
         .append(
           $("<div></div>").addClass("tabula-stdout tab-pane").html(entry.entry.stdout))
         .append(
-          $("<div></div>").addClass("tabula-stderr tab-pane").html(entry.entry.stderr));    
-      
+          $("<div></div>").addClass("tabula-stderr tab-pane").html(entry.entry.stderr));
+
       // Add the environment
       var envTable = $("<table></table>").appendTo(entryDiv.find(".tabula-env"));
       envTable.append("<thead><tr><th>Key</th><th>Value</th></tr></thead>");
-      $.each(entry.entry.priorEnv, function(key, env) {
+      $.each(entry.entry.priorEnv, function (key, env) {
         var row = $("<tr></tr>");
         row.append($("<td></td>").html(env[0]));
         row.append($("<td></td>").html(env[1]));
@@ -78,21 +74,21 @@
       });
 
       entryDiv.find(".tabula-env-btn").data("toggle", "tag")
-        .data("target", "#"+id + " .tabula-env")
+        .data("target", "#" + id + " .tabula-env")
         .click(showTab);
       entryDiv.find(".tabula-stdin-btn").data("toggle", "tag")
-        .data("target", "#"+id + " .tabula-stdin")
+        .data("target", "#" + id + " .tabula-stdin")
         .click(showTab);
       entryDiv.find(".tabula-stdout-btn").data("toggle", "tag")
-        .data("target", "#"+id + " .tabula-stdout")
+        .data("target", "#" + id + " .tabula-stdout")
         .click(showTab);
       entryDiv.find(".tabula-stderr-btn").data("toggle", "tag")
-        .data("target", "#"+id + " .tabula-stderr")
+        .data("target", "#" + id + " .tabula-stderr")
         .click(showTab);
 
       function showTab(evt) {
         var source = evt.target;
-        var panel = $("#"+id+" .tabula-streams");
+        var panel = $("#" + id + " .tabula-streams");
         if ($(source).parent().hasClass("active")) {
           $(source).parent().removeClass("active");
           panel.hide("fast");
@@ -123,23 +119,37 @@
 
   function processTime(timestamp) {
     var comps = timestamp.split("T");
-    return { "date" : comps[0], "time" : comps[1]};
+    return {
+      "date": comps[0],
+      "time": comps[1]
+    };
   }
 
   function processCwd(cwd) {
     var comps = cwd.split("/");
-    return { "full" : cwd, "short" : "../" + comps[comps.length - 1]};
+    return {
+      "full": cwd,
+      "short": "../" + comps[comps.length - 1]
+    };
   }
 
-  String.prototype.hashCode = function(){
-    var hash = 0, i, char;
-    if (this.length == 0) return hash;
+  String.prototype.hashCode = function () {
+    var hash = 0,
+      i, char;
+    if (this.length === 0) return hash;
     for (i = 0, l = this.length; i < l; i++) {
-      char  = this.charCodeAt(i);
-      hash  = ((hash<<5)-hash)+char;
+      char = this.charCodeAt(i);
+      hash = ((hash << 5) - hash) + char;
       hash |= 0; // Convert to 32bit integer
     }
     return hash;
   };
+
+  function makeTabClickable(id) {
+    $('#id a').click(function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+    });
+  }
 
 })(jQuery);

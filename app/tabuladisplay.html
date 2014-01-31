@@ -18,7 +18,6 @@
 </head>
 
 <body ng-controller="TabulaCtrl">
-
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -86,7 +85,7 @@
     </form>
     <div class="tabula-entry panel panel-default" id="project-data" ng-repeat="entry in entries | filter: { entry.command : search }">
       <div class="panel-body">
-        <div class="tabula-entry-header" id="{{getId(entry)}}">
+        <div class="tabula-entry-header" id="{{getId(entry, 'tabula-entry')}}">
           <span class="tabula-entry-starttime">{{getTime(entry.entry.startTime)}}</span>
           <span>to</span>
           <span class="tabula-entry-endtime">{{getTime(entry.entry.endTime)}}</span>
@@ -101,21 +100,21 @@
         </div>
         <div class="tabula-entry-footer">
           <ul class="nav nav-tabs">
-            <li>
-              <a class="tabula-env-btn btn active">Environment</a>
+            <li ng-class="{active: selectedTab === '{{getId(entry, 'tabula-env')}}'}">
+              <a class="tabula-env-btn btn" href="#" ng-click="changeTab(entry, 'tabula-env')">Environment</a>
             </li>
-            <li>
-              <a class="tabula-stdin-btn btn">stdin</a>
+            <li ng-class="{active: selectedTab === '{{getId(entry, 'tabula-stdin')}}'}">
+              <a class="tabula-stdin-btn btn" href="#" ng-click="changeTab(entry, 'tabula-stdin')">stdin</a>
             </li>
-            <li>
-              <a class="tabula-stdout-btn btn">stdout</a>
+            <li ng-class="{active: selectedTab === '{{getId(entry, 'tabula-stdout')}}'}">
+              <a class="tabula-stdout-btn btn" href="#" ng-click="changeTab(entry, 'tabula-stdout')">stdout</a>
             </li>
-            <li>
-              <a class="tabula-stderr-btn btn">stderr</a>
+            <li ng-class="{active: selectedTab === '{{getId(entry, 'tabula-stderr')}}'}">
+              <a class="tabula-stderr-btn btn" href="#" ng-click="changeTab(entry, 'tabula-stderr')">stderr</a>
             </li>
           </ul>
-          <div class="tabula-streams">
-            <div class="tabula-env tab-pane">
+          <div>
+            <div class="tabula-env tab-pane" id="{{getId(entry, 'tabula-env')}}" ng-show="selectedTab === '{{getId(entry, 'tabula-env')}}'">
               <table>
                 <thead>
                   <tr>
@@ -124,18 +123,21 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr ng-repeat="entry.priorEnv in entry">
+                  <tr >
                     <td>{{entry.entry.priorEnv[0]}}</td>
                     <td>{{entry.entry.priorEnv[1]}}</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <div class="tabula-stdin tab-pane">
+            <div class="tabula-stdin tab-pane" id="{{getId(entry, 'tabula-stdin')}}" ng-show="selectedTab == '{{getId(entry, 'tabula-stdin')}}'">
+              foo
             </div>
-            <div class="tabula-stdout tab-pane">
+            <div class="tabula-stdout tab-pane" id="{{getId(entry, 'tabula-stdout')}}" ng-show="selectedTab == '{{getId(entry, 'tabula-stdout')}}'">
+              fi
             </div>
-            <div class="tabula-stderr tab-pane">
+            <div class="tabula-stderr tab-pane" id="{{getId(entry, 'tabula-stderr')}}" ng-show="selectedTab == '{{getId(entry, 'tabula-stderr')}}'">
+              fum
             </div>
           </div>
         </div>
@@ -152,6 +154,7 @@
   <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/tabulate.js"></script>
+
 </body>
 
 </html>
