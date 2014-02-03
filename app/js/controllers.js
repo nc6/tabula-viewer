@@ -62,7 +62,7 @@ tabulaApp.controller('TabulaCtrl', function ($scope, $http) {
     }
   };
   
-  $scope.selectedTab = 'tabula-env1293613254';
+  $scope.selectedTab = 'value';
   
   $scope.changeTab = function(entry, tab) {
     $scope.selectedTab = $scope.getId(entry, tab);

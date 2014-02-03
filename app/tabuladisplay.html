@@ -95,7 +95,7 @@
           <span class="tabula-cwd">{{getShortDir(entry.entry.workingDirectory)}}</span>
           <span class="tabula-command">{{entry.entry.command}}</span>
           <span class="tabula-exitstatus {{exitStatus(entry.entry.exitStatus)}}">
-            <button class="lozenge" rel="popover" data-content="exitStatusInfo({{entry.entry.exitStatus}})">{{entry.entry.exitStatus}}</button>
+            <button class="lozenge" rel="popover" data-content="{{exitStatusInfo(entry.entry.exitStatus)}}">{{entry.entry.exitStatus}}</button>
           </span>
         </div>
         <div class="tabula-entry-footer">
@@ -115,7 +115,7 @@
           </ul>
           <div>
             <div class="tabula-env tab-pane" id="{{getId(entry, 'tabula-env')}}" ng-show="selectedTab === '{{getId(entry, 'tabula-env')}}'">
-              <table>
+              <table class="table table-condensed">
                 <thead>
                   <tr>
                     <th>Key</th>
@@ -123,21 +123,21 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr >
-                    <td>{{entry.entry.priorEnv[0]}}</td>
-                    <td>{{entry.entry.priorEnv[1]}}</td>
+                  <tr ng-repeat>
+                    <td>{{entry.entry.priorEnv[0][0]}}</td>
+                    <td>{{entry.entry.priorEnv[0][1]}}</td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <div class="tabula-stdin tab-pane" id="{{getId(entry, 'tabula-stdin')}}" ng-show="selectedTab == '{{getId(entry, 'tabula-stdin')}}'">
-              foo
+              {{entry.entry.stdin}}
             </div>
             <div class="tabula-stdout tab-pane" id="{{getId(entry, 'tabula-stdout')}}" ng-show="selectedTab == '{{getId(entry, 'tabula-stdout')}}'">
-              fi
+              {{entry.entry.stdout}}
             </div>
             <div class="tabula-stderr tab-pane" id="{{getId(entry, 'tabula-stderr')}}" ng-show="selectedTab == '{{getId(entry, 'tabula-stderr')}}'">
-              fum
+              {{entry.entry.stderr}}
             </div>
           </div>
         </div>
