@@ -43,6 +43,13 @@ tabulaApp.controller('TabulaCtrl', function ($scope, $http) {
     var comps = timestamp.split("T");
     return comps[0];
   };
+  
+  $scope.isDateSameAsPrevious = function (index, filteredEntries) {
+    if (index - 1 >= 0) {
+      return ($scope.getDate(filteredEntries[index].entry.startTime)===$scope.getDate(filteredEntries[index - 1].entry.startTime));
+    }
+    return false;
+  };
 
   $scope.getTime = function (timestamp) {
     var comps = timestamp.split("T");

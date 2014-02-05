@@ -84,7 +84,7 @@
       </div>
     </form>
     <div id="project-data" ng-repeat="entry in (filteredEntries = (entries | filter: { entry.command : search }))">
-      <h1 class="log-heading" ng-hide="{{getDate(entry.entry.startTime)===getDate(filteredEntries[$index - 1].entry.startTime)}}">{{getDate(entry.entry.startTime)}}</h2>
+      <h1 class="log-heading" ng-hide="isDateSameAsPrevious($index, filteredEntries)">{{getDate(entry.entry.startTime)}}</h2>
       <div class="tabula-entry panel panel-default">
         <div class="panel-body">
           <div class="tabula-entry-header" id="{{getId(entry, 'tabula-entry')}}">
