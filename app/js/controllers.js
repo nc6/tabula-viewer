@@ -19,6 +19,25 @@ tabulaApp.controller('TabulaCtrl', function ($scope, $http) {
     var comps = cwd.split("/");
     return "../" + comps[comps.length - 1];
   };
+  
+  $scope.changeDirLength = function (entry) {
+    if (!entry.hasOwnProperty('dirLength')) {
+      entry.dirLength = "long";
+    }
+    else if (entry.dirLength === "short") {
+      entry.dirLength="long";
+    }
+    else if (entry.dirLength === "long") {
+      entry.dirLength="short";
+    }
+  };
+  
+  $scope.isShort = function (entry) {
+    if (entry.hasOwnProperty('dirLength')) {
+      return (entry.dirLength==="short");
+    }
+    return true;
+  };
 
   $scope.getDate = function (timestamp) {
     var comps = timestamp.split("T");
