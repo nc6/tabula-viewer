@@ -83,66 +83,69 @@
         </div>
       </div>
     </form>
-    <div class="tabula-entry panel panel-default" id="project-data" ng-repeat="entry in entries | filter: { entry.command : search }">
-      <div class="panel-body">
-        <div class="tabula-entry-header" id="{{getId(entry, 'tabula-entry')}}">
-          <span class="tabula-entry-starttime">{{getTime(entry.entry.startTime)}}</span>
-          <span>to</span>
-          <span class="tabula-entry-endtime">{{getTime(entry.entry.endTime)}}</span>
-          <span class="tabula-entry-duration"></span>
-        </div>
-        <div class="tabula-entry-body">
-          <span class="tabula-cwd">{{getShortDir(entry.entry.workingDirectory)}}</span>
-          <span class="tabula-command">{{entry.entry.command}}</span>
-          <span class="tabula-exitstatus {{exitStatus(entry.entry.exitStatus)}}">
-            <button class="lozenge" rel="popover" data-content="{{exitStatusInfo(entry.entry.exitStatus)}}">{{entry.entry.exitStatus}}</button>
-          </span>
-        </div>
-        <div class="tabula-entry-footer">
-          <ul class="nav nav-tabs">
-            <li ng-class="{active: selectedTab === '{{getId(entry, 'tabula-env')}}'}">
-              <a class="tabula-env-btn btn" href="#" ng-click="changeTab(entry, 'tabula-env')">Environment</a>
-            </li>
-            <li ng-class="{active: selectedTab === '{{getId(entry, 'tabula-stdin')}}'}">
-              <a class="tabula-stdin-btn btn" href="#" ng-click="changeTab(entry, 'tabula-stdin')">stdin</a>
-            </li>
-            <li ng-class="{active: selectedTab === '{{getId(entry, 'tabula-stdout')}}'}">
-              <a class="tabula-stdout-btn btn" href="#" ng-click="changeTab(entry, 'tabula-stdout')">stdout</a>
-            </li>
-            <li ng-class="{active: selectedTab === '{{getId(entry, 'tabula-stderr')}}'}">
-              <a class="tabula-stderr-btn btn" href="#" ng-click="changeTab(entry, 'tabula-stderr')">stderr</a>
-            </li>
-          </ul>
-          <div>
-            <div class="tabula-env tab-pane" id="{{getId(entry, 'tabula-env')}}" ng-show="selectedTab === '{{getId(entry, 'tabula-env')}}'">
-              <table class="table table-condensed">
-                <thead>
-                  <tr>
-                    <th>Key</th>
-                    <th>Value</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr ng-repeat="env in entry.entry.priorEnv">
-                    <td>{{env[0]}}</td>
-                    <td>{{env[1]}}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="tabula-stdin tab-pane" id="{{getId(entry, 'tabula-stdin')}}" ng-show="selectedTab == '{{getId(entry, 'tabula-stdin')}}'">
-              {{entry.entry.stdin}}
-            </div>
-            <div class="tabula-stdout tab-pane" id="{{getId(entry, 'tabula-stdout')}}" ng-show="selectedTab == '{{getId(entry, 'tabula-stdout')}}'">
-              {{entry.entry.stdout}}
-            </div>
-            <div class="tabula-stderr tab-pane" id="{{getId(entry, 'tabula-stderr')}}" ng-show="selectedTab == '{{getId(entry, 'tabula-stderr')}}'">
-              {{entry.entry.stderr}}
+    <div id="project-data" ng-repeat="entry in (filteredEntries = (entries | filter: { entry.command : search }))">
+      <h1 class="log-heading" ng-hide="{{getDate(entry.entry.startTime)===getDate(filteredEntries[$index - 1].entry.startTime)}}">{{getDate(entry.entry.startTime)}}</h2>
+      <div class="tabula-entry panel panel-default">
+        <div class="panel-body">
+          <div class="tabula-entry-header" id="{{getId(entry, 'tabula-entry')}}">
+            <span class="tabula-entry-starttime">{{getTime(entry.entry.startTime)}}</span>
+            <span>to</span>
+            <span class="tabula-entry-endtime">{{getTime(entry.entry.endTime)}}</span>
+            <span class="tabula-entry-duration"></span>
+          </div>
+          <div class="tabula-entry-body">
+            <span class="tabula-cwd">{{getShortDir(entry.entry.workingDirectory)}}</span>
+            <span class="tabula-command">{{entry.entry.command}}</span>
+            <span class="tabula-exitstatus {{exitStatus(entry.entry.exitStatus)}}">
+              <button class="lozenge" rel="popover" data-content="{{exitStatusInfo(entry.entry.exitStatus)}}">{{entry.entry.exitStatus}}</button>
+            </span>
+          </div>
+          <div class="tabula-entry-footer">
+            <ul class="nav nav-tabs">
+              <li ng-class="{active: selectedTab === '{{getId(entry, 'tabula-env')}}'}">
+                <a class="tabula-env-btn btn" href="#" ng-click="changeTab(entry, 'tabula-env')">Environment</a>
+              </li>
+              <li ng-class="{active: selectedTab === '{{getId(entry, 'tabula-stdin')}}'}">
+                <a class="tabula-stdin-btn btn" href="#" ng-click="changeTab(entry, 'tabula-stdin')">stdin</a>
+              </li>
+              <li ng-class="{active: selectedTab === '{{getId(entry, 'tabula-stdout')}}'}">
+                <a class="tabula-stdout-btn btn" href="#" ng-click="changeTab(entry, 'tabula-stdout')">stdout</a>
+              </li>
+              <li ng-class="{active: selectedTab === '{{getId(entry, 'tabula-stderr')}}'}">
+                <a class="tabula-stderr-btn btn" href="#" ng-click="changeTab(entry, 'tabula-stderr')">stderr</a>
+              </li>
+            </ul>
+            <div>
+              <div class="tabula-env tab-pane" id="{{getId(entry, 'tabula-env')}}" ng-show="selectedTab === '{{getId(entry, 'tabula-env')}}'">
+                <table class="table table-condensed">
+                  <thead>
+                    <tr>
+                      <th>Key</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="env in entry.entry.priorEnv">
+                      <td>{{env[0]}}</td>
+                      <td>{{env[1]}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="tabula-stdin tab-pane" id="{{getId(entry, 'tabula-stdin')}}" ng-show="selectedTab == '{{getId(entry, 'tabula-stdin')}}'">
+                {{entry.entry.stdin}}
+              </div>
+              <div class="tabula-stdout tab-pane" id="{{getId(entry, 'tabula-stdout')}}" ng-show="selectedTab == '{{getId(entry, 'tabula-stdout')}}'">
+                {{entry.entry.stdout}}
+              </div>
+              <div class="tabula-stderr tab-pane" id="{{getId(entry, 'tabula-stderr')}}" ng-show="selectedTab == '{{getId(entry, 'tabula-stderr')}}'">
+                {{entry.entry.stderr}}
+              </div>
             </div>
           </div>
         </div>
+        <div class="panel-footer"></div>
       </div>
-      <div class="panel-footer"></div>
     </div>
   </div>
 

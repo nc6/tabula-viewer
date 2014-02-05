@@ -1,7 +1,7 @@
 (function ($) {
   $(document).ready(function () {
     $('#template-entry-hidden').load("entry.template.html");
-
+    
     $('#btn-load-project').click(function () {
       var project = $('#project-name').val();
       $.getJSON(project, renderData);
