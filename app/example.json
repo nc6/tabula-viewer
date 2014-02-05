@@ -1549,8 +1549,8 @@
     "entry": {
         "exitStatus": 0,
         "workingDirectory": "/Users/nc6/work/tabula",
-        "startTime": "2014-01-15T12:37:31.8Z",
-        "endTime": "2014-01-15T12:37:31.822Z",
+        "startTime": "2014-01-16T12:37:31.8Z",
+        "endTime": "2014-01-16T12:37:31.822Z",
         "command": "512 grep -i conduit tabula.cabal | wc -l",
         "events": [
             {
@@ -1685,6 +1685,6 @@
         "stdout": "mib105205i:tabula nc6$ grep -i conduit tabula.cabal | wc -l\r\n"
     },
     "version": 6,
-    "timestamp": "2014-01-15T12:37:31.8Z",
+    "timestamp": "2014-01-16T12:37:31.8Z",
     "namespace": "tabula::consoleRecord"
 }]
