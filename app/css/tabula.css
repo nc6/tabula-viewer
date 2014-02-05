@@ -148,3 +148,11 @@ div.tabula-entry .exitFailure .lozenge {
 div.tabula-entry .tabula-env-btn {
   margin-right: 20px;
 }
+
+table {
+    table-layout: fixed;
+}
+
+td {
+    word-wrap:break-word;
+}

@@ -123,9 +123,9 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr ng-repeat>
-                    <td>{{entry.entry.priorEnv[0][0]}}</td>
-                    <td>{{entry.entry.priorEnv[0][1]}}</td>
+                  <tr ng-repeat="env in entry.entry.priorEnv">
+                    <td>{{env[0]}}</td>
+                    <td>{{env[1]}}</td>
                   </tr>
                 </tbody>
               </table>
