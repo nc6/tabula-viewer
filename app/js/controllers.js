@@ -1,18 +1,19 @@
 'use strict';
 
 /* Controllers */
-
-
 var tabulaApp = angular.module('tabulaApp', []);
 
 tabulaApp.controller('TabulaCtrl', function ($scope, $http) {
-  $http.get('example.json').then(function (res) {
-    $scope.entries = res.data;
-  });
-  
+
+  $scope.load = function (projectName) {
+    $http.get(projectName).then(function (res) {
+      $scope.entries = res.data;
+    });
+  };
+
   $scope.orderProp = 'entry.startTime';
-  
-  $scope.getId = function(entry, prefix) {
+
+  $scope.getId = function (entry, prefix) {
     return prefix + entry.timestamp.hashCode();
   };
 
@@ -21,56 +22,52 @@ tabulaApp.controller('TabulaCtrl', function ($scope, $http) {
     var comps = cwd.split("/");
     return "../" + comps[comps.length - 1];
   };
-  
+
   $scope.changeDirLength = function (entry) {
     if (!entry.hasOwnProperty('dirLength')) {
       entry.dirLength = "long";
-    }
-    else if (entry.dirLength === "short") {
-      entry.dirLength="long";
-    }
-    else if (entry.dirLength === "long") {
-      entry.dirLength="short";
+    } else if (entry.dirLength === "short") {
+      entry.dirLength = "long";
+    } else if (entry.dirLength === "long") {
+      entry.dirLength = "short";
     }
   };
-  
+
   $scope.isShort = function (entry) {
     if (entry.hasOwnProperty('dirLength')) {
-      return (entry.dirLength==="short");
+      return (entry.dirLength === "short");
     }
     return true;
   };
   /* End directory stuff */
-  
+
   /* Tab selection */
   $scope.changeTab = function (entry, tab) {
     if (!entry.hasOwnProperty('selectedTab')) {
       entry.selectedTab = tab;
-    }
-    else if (entry.selectedTab === tab) {
+    } else if (entry.selectedTab === tab) {
       entry.selectedTab = 'none';
-    }
-    else {
+    } else {
       entry.selectedTab = tab;
     }
   };
-  
+
   /* $scope.changeTab = function(entry, tab) {
     $scope.selectedTab = $scope.getId(entry, tab);
   };
 */
-  
+
   /* End tab stuff */
-  
+
   /* Datetime */
   $scope.getDate = function (timestamp) {
     var comps = timestamp.split("T");
     return comps[0];
   };
-  
+
   $scope.isDateSameAsPrevious = function (index, filteredEntries) {
     if (index - 1 >= 0) {
-      return ($scope.getDate(filteredEntries[index].entry.startTime)===$scope.getDate(filteredEntries[index - 1].entry.startTime));
+      return ($scope.getDate(filteredEntries[index].entry.startTime) === $scope.getDate(filteredEntries[index - 1].entry.startTime));
     }
     return false;
   };
@@ -115,4 +112,3 @@ tabulaApp.controller('TabulaCtrl', function ($scope, $http) {
   };
   /* End exit status lozenges */
 });
-
