@@ -15,6 +15,7 @@
   <link href="css/tabula.css" rel="stylesheet">
   <script src="lib/angular/angular.js"></script>
   <script src="js/controllers.js"></script>
+  <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.js"></script>
 </head>
 
 <body ng-controller="TabulaCtrl">
@@ -97,7 +98,7 @@
             <span class="tabula-cwd" ng-click="changeDirLength(entry)"><p ng-show="isShort(entry)">{{getShortDir(entry.entry.workingDirectory)}}</p><p ng-hide="isShort(entry)">{{entry.entry.workingDirectory}}</p></span>
             <span class="tabula-command">{{entry.entry.command}}</span>
             <span class="tabula-exitstatus {{exitStatus(entry.entry.exitStatus)}}">
-              <button class="lozenge" rel="popover" data-content="{{exitStatusInfo(entry.entry.exitStatus)}}">{{entry.entry.exitStatus}}</button>
+              <span class="lozenge" data-content="{{exitStatusInfo(entry.entry.exitStatus)}}">{{entry.entry.exitStatus}}</span>
             </span>
           </div>
           <div class="tabula-entry-footer">

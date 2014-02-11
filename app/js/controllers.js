@@ -2,6 +2,7 @@
 
 /* Controllers */
 
+
 var tabulaApp = angular.module('tabulaApp', []);
 
 tabulaApp.controller('TabulaCtrl', function ($scope, $http) {
@@ -113,6 +114,5 @@ tabulaApp.controller('TabulaCtrl', function ($scope, $http) {
     }
   };
   /* End exit status lozenges */
-
-
 });
+
