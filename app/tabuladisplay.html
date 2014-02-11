@@ -102,21 +102,21 @@
           </div>
           <div class="tabula-entry-footer">
             <ul class="nav nav-tabs">
-              <li ng-class="{active: selectedTab === '{{getId(entry, 'tabula-env')}}'}">
-                <a class="tabula-env-btn btn" href="#" ng-click="changeTab(entry, 'tabula-env')">Environment</a>
+              <li ng-class="{active: entry.selectedTab === 'env'}">
+                <a class="tabula-env-btn btn" href="#" ng-click="changeTab(entry, 'env')">Environment</a>
               </li>
-              <li ng-class="{active: selectedTab === '{{getId(entry, 'tabula-stdin')}}'}">
-                <a class="tabula-stdin-btn btn" href="#" ng-click="changeTab(entry, 'tabula-stdin')">stdin</a>
+              <li ng-class="{active: entry.selectedTab === 'stdin'}">
+                <a class="tabula-stdin-btn btn" href="#" ng-click="changeTab(entry, 'stdin')">stdin</a>
               </li>
-              <li ng-class="{active: selectedTab === '{{getId(entry, 'tabula-stdout')}}'}">
-                <a class="tabula-stdout-btn btn" href="#" ng-click="changeTab(entry, 'tabula-stdout')">stdout</a>
+              <li ng-class="{active: entry.selectedTab === 'stdout'}">
+                <a class="tabula-stdout-btn btn" href="#" ng-click="changeTab(entry, 'stdout')">stdout</a>
               </li>
-              <li ng-class="{active: selectedTab === '{{getId(entry, 'tabula-stderr')}}'}">
-                <a class="tabula-stderr-btn btn" href="#" ng-click="changeTab(entry, 'tabula-stderr')">stderr</a>
+              <li ng-class="{active: entry.selectedTab === 'stderr'}">
+                <a class="tabula-stderr-btn btn" href="#" ng-click="changeTab(entry, 'stderr')">stderr</a>
               </li>
             </ul>
             <div>
-              <div class="tabula-env tab-pane" id="{{getId(entry, 'tabula-env')}}" ng-show="selectedTab === '{{getId(entry, 'tabula-env')}}'">
+              <div class="tabula-env tab-pane" id="{{getId(entry, 'tabula-env')}}" ng-show="entry.selectedTab === 'env'">
                 <table class="table table-condensed">
                   <thead>
                     <tr>
@@ -132,13 +132,13 @@
                   </tbody>
                 </table>
               </div>
-              <div class="tabula-stdin tab-pane" id="{{getId(entry, 'tabula-stdin')}}" ng-show="selectedTab == '{{getId(entry, 'tabula-stdin')}}'">
+              <div class="tabula-stdin tab-pane" id="{{getId(entry, 'tabula-stdin')}}" ng-show="entry.selectedTab === 'stdin'">
                 {{entry.entry.stdin}}
               </div>
-              <div class="tabula-stdout tab-pane" id="{{getId(entry, 'tabula-stdout')}}" ng-show="selectedTab == '{{getId(entry, 'tabula-stdout')}}'">
+              <div class="tabula-stdout tab-pane" id="{{getId(entry, 'tabula-stdout')}}" ng-show="entry.selectedTab === 'stdout'">
                 {{entry.entry.stdout}}
               </div>
-              <div class="tabula-stderr tab-pane" id="{{getId(entry, 'tabula-stderr')}}" ng-show="selectedTab == '{{getId(entry, 'tabula-stderr')}}'">
+              <div class="tabula-stderr tab-pane" id="{{getId(entry, 'tabula-stderr')}}" ng-show="entry.selectedTab === 'stderr'">
                 {{entry.entry.stderr}}
               </div>
             </div>

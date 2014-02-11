@@ -15,6 +15,7 @@ tabulaApp.controller('TabulaCtrl', function ($scope, $http) {
     return prefix + entry.timestamp.hashCode();
   };
 
+  /* Directory stuff */
   $scope.getShortDir = function (cwd) {
     var comps = cwd.split("/");
     return "../" + comps[comps.length - 1];
@@ -38,7 +39,29 @@ tabulaApp.controller('TabulaCtrl', function ($scope, $http) {
     }
     return true;
   };
-
+  /* End directory stuff */
+  
+  /* Tab selection */
+  $scope.changeTab = function (entry, tab) {
+    if (!entry.hasOwnProperty('selectedTab')) {
+      entry.selectedTab = tab;
+    }
+    else if (entry.selectedTab === tab) {
+      entry.selectedTab = 'none';
+    }
+    else {
+      entry.selectedTab = tab;
+    }
+  };
+  
+  /* $scope.changeTab = function(entry, tab) {
+    $scope.selectedTab = $scope.getId(entry, tab);
+  };
+*/
+  
+  /* End tab stuff */
+  
+  /* Datetime */
   $scope.getDate = function (timestamp) {
     var comps = timestamp.split("T");
     return comps[0];
@@ -55,7 +78,9 @@ tabulaApp.controller('TabulaCtrl', function ($scope, $http) {
     var comps = timestamp.split("T");
     return comps[1];
   };
+  /* End datetime */
 
+  /* Exit status lozenges */
   $scope.exitStatus = function (exitStatus) {
     if (exitStatus === 0) {
       // Successful
@@ -87,11 +112,7 @@ tabulaApp.controller('TabulaCtrl', function ($scope, $http) {
       return "Command failed";
     }
   };
-  
-  $scope.selectedTab = '';
-  
-  $scope.changeTab = function(entry, tab) {
-    $scope.selectedTab = $scope.getId(entry, tab);
-  };
+  /* End exit status lozenges */
+
 
 });
