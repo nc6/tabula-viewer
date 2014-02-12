@@ -13,8 +13,6 @@
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/tabula.css" rel="stylesheet">
-  <script src="js/viewmodel.js"></script>
-  <script type='text/javascript' src='js/knockout.js'></script>
 </head>
 
 <body ng-controller="TabulaCtrl">
@@ -54,7 +52,7 @@
             <input type="text" id="project-name" class="form-control" placeholder="example.json" ng-model="projectName">
           </div>
           <span class="input-group-btn col-xs-4 col-sm-3 col-md-2">
-            <button type="button" type="submit" class="btn btn-primary" ng-click="load(projectName)">Load log</button>
+            <button type="button" type="submit" class="btn btn-primary" id="btn-load-project" ng-click="load(projectName)">Load log</button>
           </span>
         </div>
       </form>
@@ -84,7 +82,7 @@
       </form>
     </div>
     <div id="project-data" ng-repeat="entry in (filteredEntries = (entries | filter: { entry.command : search }))">
-      <h1 class="log-heading" ng-hide="isDateSameAsPrevious($index, filteredEntries)">{{getDate(entry.entry.startTime)}}</h2>
+      <!--      <h1 class="log-heading" ng-hide="isDateSameAsPrevious($index, filteredEntries)">{{getDate(entry.entry.startTime)}}</h2>
         <div class="tabula-entry panel panel-default">
           <div class="panel-body">
             <div class="tabula-entry-header" id="{{getId(entry, 'tabula-entry')}}">
@@ -148,7 +146,7 @@
             </div>
           </div>
           <div class="panel-footer"></div>
-        </div>
+        </div>-->
     </div>
   </div>
 
@@ -157,8 +155,8 @@
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/tabulate.js"></script>
-
+  <script src='js/knockout.js'></script>
+  <script src="js/viewmodel.js"></script>
 </body>
 
 </html>
