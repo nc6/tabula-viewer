@@ -81,25 +81,24 @@
         </div>
       </form>
     </div>-->
-    <h1 class="log-heading" data-bind="text: entries().length"></h1>
     <div id="project-data" data-bind="foreach: entries">
       <h1 class="log-heading"></h1>
       <div class="tabula-entry panel panel-default">
         <div class="panel-body">
           <div class="tabula-entry-header" id="{{getId(entry, 'tabula-entry')}}">
-            <span class="tabula-entry-starttime" data-bind="text: entries().entry.startTime"></span>
+            <span class="tabula-entry-starttime" data-bind="text: entry.startTime"></span>
             <span>to</span>
-            <span class="tabula-entry-endtime">{{getTime(entry.entry.endTime)}}</span>
+            <span class="tabula-entry-endtime" data-bind="text: entry.endTime"></span>
             <span class="tabula-entry-duration"></span>
           </div>
           <div class="tabula-entry-body">
             <span class="tabula-cwd" ng-click="changeDirLength(entry)">
-              <p ng-show="isShort(entry)">{{getShortDir(entry.entry.workingDirectory)}}</p>
-              <p ng-hide="isShort(entry)">{{entry.entry.workingDirectory}}</p>
+              <p  data-bind="text: entry.workingDirectory"></p>
+<!--              <p ng-hide="isShort(entry)">{{entry.entry.workingDirectory}}</p>-->
             </span>
             <span class="tabula-command" data-bind="text: entry.command"></span>
-            <span class="tabula-exitstatus {{exitStatus(entry.entry.exitStatus)}}">
-              <span class="lozenge" data-content="{{exitStatusInfo(entry.entry.exitStatus)}}">{{entry.entry.exitStatus}}</span>
+            <span class="tabula-exitstatus" data-bind="css: { entry.exitStatus }">
+              <span class="lozenge" data-bind="text: entry.exitStatus"></span>
             </span>
           </div>
           <div class="tabula-entry-footer">

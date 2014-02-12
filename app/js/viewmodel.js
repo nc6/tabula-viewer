@@ -2,9 +2,9 @@ function ViewModel() {
   var self = this;
   self.entries = ko.observableArray();
   self.loadEntries = function (data) {
+    self.entries.removeAll();
     data.forEach(function(e){
       self.entries.push(e);
-      alert("banana");
     });
   };
 
