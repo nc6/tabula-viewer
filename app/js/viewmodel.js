@@ -21,6 +21,7 @@ function ViewModel() {
   });
   
   self.changeTab = function(newTab) {
+    // 'this' is 'entry.selectedTab'
     if (this() === newTab) {
       this('none');
     } else {
@@ -29,6 +30,7 @@ function ViewModel() {
   };
   
   self.changeDirLength = function() {
+    // 'this' is 'entry.dirLength'
     if (this() === 'short') {
       this('long');
     } else if (this() === 'long') {
