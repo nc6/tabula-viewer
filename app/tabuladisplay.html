@@ -86,9 +86,9 @@
       <div class="tabula-entry panel panel-default">
         <div class="panel-body">
           <div class="tabula-entry-header">
-            <span class="tabula-entry-starttime" data-bind="text: entry.startTime"></span>
+            <span class="tabula-entry-starttime" data-bind="text: $root.getDate(entry.startTime)"></span>
             <span>to</span>
-            <span class="tabula-entry-endtime" data-bind="text: entry.endTime"></span>
+            <span class="tabula-entry-endtime" data-bind="text: $root.getDate(entry.endTime)"></span>
             <span class="tabula-entry-duration"></span>
           </div>
           <div class="tabula-entry-body">

@@ -41,6 +41,12 @@ function ViewModel() {
     return "../" + comps[comps.length - 1];
   };
   
+  self.getDate = function(dateTime) {
+    var comps = dateTime.split("T");
+    return comps[1];
+    
+  };
+  
   (function ($) {
     $(document).ready(function () {
       $('#btn-load-project').click(function () {
