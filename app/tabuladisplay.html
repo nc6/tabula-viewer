@@ -97,7 +97,6 @@
 <!--            TODO: show/hide short/long dir  <p ng-hide="isShort(entry)">{{entry.entry.workingDirectory}}</p>-->
             </span>
             <span class="tabula-command" data-bind="text: entry.command"></span>
-            <span data-bind="text: entry.selectedTab"></span>
             <span class="tabula-exitstatus" data-bind="css: { exitSuccess : entry.exitStatus == 0, exitFailure : entry.exitStatus > 0 && entry.exitStatus < 128, exitKilled : entry.exitStatus >= 128 } ">
 <!--    TODO: hide logic in class collector inside viewer          -->
               <span class="lozenge" data-bind="text: entry.exitStatus"></span>
@@ -105,22 +104,22 @@
           </div>
           <div class="tabula-entry-footer">
             <ul class="nav nav-tabs">
-              <li data-bind="css: { active : entry.selectedTab == 'env' } ">
-                <a class="tabula-env-btn btn" href="" data-bind="click: $root.changeTab.bind(entry, 'env')">Environment</a>
+              <li data-bind="css: { active : entry.selectedTab() === 'env' } ">
+                <a class="tabula-env-btn btn" href="" data-bind="click: $root.changeTab.bind(entry.selectedTab, 'env')">Environment</a>
                 
               </li>
-              <li data-bind="css: { active : entry.selectedTab == 'stdin' } ">
-                <a class="tabula-stdin-btn btn" href="" data-bind="click: $root.changeTab.bind(entry, 'stdin')">stdin</a>
+              <li data-bind="css: { active : entry.selectedTab() === 'stdin' } ">
+                <a class="tabula-stdin-btn btn" href="" data-bind="click: $root.changeTab.bind(entry.selectedTab, 'stdin')">stdin</a>
               </li>
-              <li data-bind="css: { active : entry.selectedTab == 'stdout' } ">
-                <a class="tabula-stdout-btn btn" href="" data-bind="click: $root.changeTab.bind(entry, 'stdout')">stdout</a>
+              <li data-bind="css: { active : entry.selectedTab() === 'stdout' } ">
+                <a class="tabula-stdout-btn btn" href="" data-bind="click: $root.changeTab.bind(entry.selectedTab, 'stdout')">stdout</a>
               </li>
-              <li data-bind="css: { active : entry.selectedTab == 'stderr' } ">
-                <a class="tabula-stderr-btn btn" href="" data-bind="click: $root.changeTab.bind(entry, 'stderr')">stderr</a>
+              <li data-bind="css: { active : entry.selectedTab() === 'stderr' } ">
+                <a class="tabula-stderr-btn btn" href="" data-bind="click: $root.changeTab.bind(entry.selectedTab, 'stderr')">stderr</a>
               </li>
             </ul>
             <div>
-              <div class="tabula-env tab-pane" data-bind="visible: entry.selectedTab === 'env'">
+              <div class="tabula-env tab-pane" data-bind="visible: entry.selectedTab() === 'env'">
                 <table class="table table-condensed">
                   <thead>
                     <tr>
@@ -136,13 +135,13 @@
                   </tbody>
                 </table>
               </div>
-              <div class="tabula-stdin tab-pane" data-bind="visible: entry.selectedTab == 'stdin'">
+              <div class="tabula-stdin tab-pane" data-bind="visible: entry.selectedTab() === 'stdin'">
                 {{entry.entry.stdin}}
               </div>
-              <div class="tabula-stdout tab-pane" data-bind="visible: entry.selectedTab == 'stdout'">
+              <div class="tabula-stdout tab-pane" data-bind="visible: entry.selectedTab() === 'stdout'">
                 {{entry.entry.stdout}}
               </div>
-              <div class="tabula-stderr tab-pane" data-bind="visible: entry.selectedTab == 'stderr'">
+              <div class="tabula-stderr tab-pane" data-bind="visible: entry.selectedTab() === 'stderr'">
                 {{entry.entry.stderr}}
               </div>
             </div>

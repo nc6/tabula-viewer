@@ -5,6 +5,7 @@ function ViewModel() {
   self.loadEntries = function(data) {
     self.entries.removeAll();
     data.forEach(function(e){
+      e.entry.selectedTab = ko.observable("none");
       self.entries.push(e);
     });
   };
@@ -18,13 +19,11 @@ function ViewModel() {
       return 'exitKilled';
   });
   
-  self.changeTab = function(tab) {
-    if (!this.hasOwnProperty('selectedTab')) {
-      this.selectedTab = tab;
-    } else if (this.selectedTab == tab) {
-      this.selectedTab = 'none';
+  self.changeTab = function(newTab) {
+    if (this() === newTab) {
+      this('none');
     } else {
-      this.selectedTab = tab;
+      this(newTab);
     }
   };
   
