@@ -85,15 +85,16 @@
       <h1 class="log-heading"></h1>
       <div class="tabula-entry panel panel-default">
         <div class="panel-body">
-          <div class="tabula-entry-header" id="{{getId(entry, 'tabula-entry')}}">
+          <div class="tabula-entry-header">
             <span class="tabula-entry-starttime" data-bind="text: entry.startTime"></span>
             <span>to</span>
             <span class="tabula-entry-endtime" data-bind="text: entry.endTime"></span>
             <span class="tabula-entry-duration"></span>
           </div>
           <div class="tabula-entry-body">
-            <span class="tabula-cwd" ng-click="changeDirLength(entry)">
-              <p  data-bind="text: entry.workingDirectory"></p>
+            <span class="tabula-cwd" data-bind="click: $root.changeDirLength.bind(entry.dirLength)">
+              <p data-bind="text: entry.workingDirectory, visible: entry.dirLength() === 'long' "></p>
+              <p data-bind="text: $root.shortDir(entry.workingDirectory), visible: entry.dirLength() === 'short' "></p>
 <!--            TODO: show/hide short/long dir  <p ng-hide="isShort(entry)">{{entry.entry.workingDirectory}}</p>-->
             </span>
             <span class="tabula-command" data-bind="text: entry.command"></span>
@@ -127,23 +128,17 @@
                       <th>Value</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr ng-repeat="env in entry.entry.priorEnv">
-                      <td>{{env[0]}}</td>
-                      <td>{{env[1]}}</td>
+                  <tbody data-bind="foreach: entry.priorEnv">
+                    <tr>
+                      <td data-bind="text: $data[0]"></td>
+                      <td data-bind="text: $data[1]"></td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <div class="tabula-stdin tab-pane" data-bind="visible: entry.selectedTab() === 'stdin'">
-                {{entry.entry.stdin}}
-              </div>
-              <div class="tabula-stdout tab-pane" data-bind="visible: entry.selectedTab() === 'stdout'">
-                {{entry.entry.stdout}}
-              </div>
-              <div class="tabula-stderr tab-pane" data-bind="visible: entry.selectedTab() === 'stderr'">
-                {{entry.entry.stderr}}
-              </div>
+              <div class="tabula-stdin tab-pane" data-bind="visible: entry.selectedTab() === 'stdin', text: entry.stdin !== '' ? entry.stdin : 'nothing to display'"></div>
+              <div class="tabula-stdout tab-pane" data-bind="visible: entry.selectedTab() === 'stdout', text: entry.stdout !== '' ? entry.stdout : 'nothing to display'"></div>
+              <div class="tabula-stderr tab-pane" data-bind="visible: entry.selectedTab() === 'stderr', text: entry.stderr !== '' ? entry.stderr : 'nothing to display'"></div>
             </div>
           </div>
         </div>

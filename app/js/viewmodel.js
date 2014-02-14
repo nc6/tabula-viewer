@@ -6,6 +6,7 @@ function ViewModel() {
     self.entries.removeAll();
     data.forEach(function(e){
       e.entry.selectedTab = ko.observable("none");
+      e.entry.dirLength = ko.observable("short");
       self.entries.push(e);
     });
   };
@@ -25,6 +26,19 @@ function ViewModel() {
     } else {
       this(newTab);
     }
+  };
+  
+  self.changeDirLength = function() {
+    if (this() === 'short') {
+      this('long');
+    } else if (this() === 'long') {
+      this('short');
+    }
+  };
+  
+  self.shortDir = function(dir) {
+    var comps = dir.split("/");
+    return "../" + comps[comps.length - 1];
   };
   
   (function ($) {
