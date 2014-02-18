@@ -67,7 +67,7 @@ ko.bindingHandlers.popoverInit = {
   init: function (element) {
     element = $(element);
     var contentSelector = element.data("popover-content-selector");
-    var contentElement = $(contentSelector);
+    var contentElement = element.find(contentSelector);
     $(contentElement).hide();
 
     element.popover({
