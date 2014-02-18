@@ -56,11 +56,15 @@
           </span>
         </div>
       </form>
+      <button class="lozenge" data-bind="popoverInit: popover" data-popover-content-selector="#popoverTest" title="aa">test</button>
+      <span id="popoverTest" class="hidden">
+        <p>Here's some content for the test popover</p>
+      </span>
     </div>
   </div>
   <!-- /container -->
   <div class="container">
-<!--    <div ng-show="entries">
+    <!--    <div ng-show="entries">
       <h1 class="log-heading">Project log</h1>
       <form class="form-horizontal" role="form">
         <div class="form-group">
@@ -81,7 +85,7 @@
         </div>
       </form>
     </div>-->
-    <h1 class="log-heading">Project log</h1>
+    <h1 class="log-heading" data-bind="visible: loaded()">Project log</h1>
     <div id="project-data" data-bind="foreach: entries">
       <div class="tabula-entry panel panel-default">
         <div class="panel-body">
@@ -95,19 +99,21 @@
             <span class="tabula-cwd" data-bind="click: $root.changeDirLength.bind(entry.dirLength)">
               <p data-bind="text: entry.workingDirectory, visible: entry.dirLength() === 'long' "></p>
               <p data-bind="text: $root.shortDir(entry.workingDirectory), visible: entry.dirLength() === 'short' "></p>
-<!--            TODO: show/hide short/long dir  <p ng-hide="isShort(entry)">{{entry.entry.workingDirectory}}</p>-->
             </span>
             <span class="tabula-command" data-bind="text: entry.command"></span>
-            <span class="tabula-exitstatus" data-bind="css: { exitSuccess : entry.exitStatus == 0, exitFailure : entry.exitStatus > 0 && entry.exitStatus < 128, exitKilled : entry.exitStatus >= 128 } ">
-<!--    TODO: hide logic in class collector inside viewer          -->
-              <span class="lozenge" data-bind="text: entry.exitStatus"></span>
+            <span class="tabula-exitstatus" data-bind="css: { exitSuccess : entry.exitStatus == 0, exitFailure : entry.exitStatus > 0 && entry.exitStatus < 128, exitKilled : entry.exitStatus >= 128 }">
+              <!--    TODO: hide logic in class collector inside viewer          -->
+              <button class="lozenge" data-bind="text: entry.exitStatus, popoverInit: popover" data-popover-content-selector="#spaceToReclaimPopoverContent" title=""></button>
+              <span id="spaceToReclaimPopoverContent" class="hidden">
+                <p data-bind="text: { exitSuccess : entry.exitStatus == 0, exitFailure : entry.exitStatus > 0 && entry.exitStatus < 128, exitKilled : entry.exitStatus >= 128 } "></p>
+              </span>
             </span>
           </div>
           <div class="tabula-entry-footer">
             <ul class="nav nav-tabs">
               <li data-bind="css: { active : entry.selectedTab() === 'env' } ">
                 <a class="tabula-env-btn btn" href="" data-bind="click: $root.changeTab.bind(entry.selectedTab, 'env')">Environment</a>
-                
+
               </li>
               <li data-bind="css: { active : entry.selectedTab() === 'stdin' } ">
                 <a class="tabula-stdin-btn btn" href="" data-bind="click: $root.changeTab.bind(entry.selectedTab, 'stdin')">stdin</a>
@@ -151,7 +157,7 @@
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.js"></script>
   <script src='js/knockout.js'></script>
   <script src="js/viewmodel.js"></script>
 </body>
