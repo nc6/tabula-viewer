@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="tabulaApp" lang="en">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -15,7 +15,7 @@
   <link href="css/tabula.css" rel="stylesheet">
 </head>
 
-<body ng-controller="TabulaCtrl">
+<body>
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -45,14 +45,14 @@
     <div class="grey-box">
       <h1>Tabula log viewer</h1>
       <p>Enter a tabula project log name.</p>
-      <form class="form-horizontal" role="form" ng-submit="load(projectName)">
+      <form class="form-horizontal" role="form">
         <div class="form-group">
           <label for="search-box" class="control-label col-xs-4 col-sm-3 col-md-1">Project log</label>
           <div class="col-xs-4 col-sm-6 col-md-8">
-            <input type="text" id="project-name" class="form-control" placeholder="example.json" ng-model="projectName">
+            <input type="text" id="project-name" class="form-control" placeholder="example.json">
           </div>
           <span class="input-group-btn col-xs-4 col-sm-3 col-md-2">
-            <button type="button" type="submit" class="btn btn-primary" id="btn-load-project" ng-click="load(projectName)">Load log</button>
+            <button type="button" type="submit" class="btn btn-primary" id="btn-load-project">Load log</button>
           </span>
         </div>
       </form>
